@@ -1,0 +1,43 @@
+
+.top {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.main {
+    margin-right: 15px;
+}
+
+.left-margin-15 {
+    margin-left: 15px;
+}
+
+@media (min-width: 1000px) {
+    .navbar-nav {
+        float: none;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-nav > li {
+        display: inline-block;
+        float: none;
+    }
+}
+
+.image-cropper {
+    width: 420px;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-pic {
+    display: inline;
+    margin: 0 auto;
+    margin-left: -10%;
+    height: auto;
+    width: auto;
+}
