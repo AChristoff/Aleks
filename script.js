@@ -22,6 +22,11 @@ function attachEvents() {
 
     //----------------------------------
 
+
+    $('#avatar').on('click', function () {
+        location.hash = '#portfolio';
+    });
+
     $('#cv').on('click', () => {
         console.log('downloading CV');
     });
