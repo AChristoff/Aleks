@@ -1,8 +1,28 @@
+#new-nav {
+    background-color: #3ca861;
+}
+
+h3 {
+    padding-top: 110px;
+}
 
 .top {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+/* ----------------------------- */
+.fixed-nav {
+    background: #fff;
+    box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 102%;
+    transition: transform .5s;
+    transform: translateY(100px)
+}
+/* ----------------------------- */
 
 .main {
     margin-right: 15px;
@@ -24,6 +44,11 @@
         display: inline-block;
         float: none;
     }
+}
+
+
+.download {
+    font-size: 14px;
 }
 
 .image-cropper {
