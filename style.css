@@ -20,16 +20,19 @@
 .delimiter {
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 280px;
-    border: solid #D2D2D2 1px;
+    height: 205px;
+
     width: 100%;
     background-color: #ffffff;
-    background-image: url("./images/diagonal-striped-brick.png");
+    background-image: url("./images/binary.png");
     background-repeat: repeat;
-
 }
 
-
+.obj {
+    font-weight: bold;
+    text-transform: lowercase;
+    color: #000;
+}
 
 /* ----------------------------- */
 .fixed-nav {
@@ -81,10 +84,16 @@
     border-radius: 50%;
 }
 
-.profile-pic {
+.pic {
     display: inline;
-    margin: 0 auto;
-    margin-left: -10%;
     height: auto;
     width: auto;
+}
+
+.array {
+    font-size: 20px;
+}
+
+.let {
+    text-transform: lowercase;
 }
