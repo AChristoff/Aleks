@@ -1,163 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Portfolio</title>
+    <title>Aleks`s web (SPA)</title>
+    <link rel="icon" href="./images/favicon.png">
+    <!-- CSS -->
     <!-- bootstrap link -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- my Style link -->
-    <link rel="stylesheet" href="style.css">
-    <!-- bootstrap Style link -->
-    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/notifications.css">
+
+    <!-- JS -->
+
+    <!-- note modules -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="node_modules/sammy/lib/sammy.js"></script>
+    <script src="node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+    <!-- default -->
+    <script src="scripts/kinvey.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/notify.js"></script>
+    <script src="scripts/events.js"></script>
+
+    <!-- Services -->
+    <script src="scripts/services/user-service.js"></script>
+    <script src="scripts/services/info-service.js"></script>
+
+    <!-- Controllers -->
+    <script src="scripts/controllers/home-controller.js"></script>
+    <script src="scripts/controllers/info-controller.js"></script>
+    <script src="scripts/controllers/user-controller.js"></script>
+
 </head>
 
 <body>
 
-<!-- ------------------------------------------------------------------------------ -->
+<div id="root"></div>
 
-<!-- Nav bar -->
-<div id="top" class="row">
-    <div id="first-col" class="col">
-        <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a id="aleks" class="navbar-brand" href="#">
-                    <span class="let">let </span>
-                    ALEKS
-                </a>
-                <span class="let"> =</span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-                        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse nav-buttons" id="navbarColor03">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">
-                                <span class="array">[</span>
-                                Home
-                                <span class="array"> ,</span>
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">
-                                About
-                                <span class="array"> ,</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">
-                                Portfolio
-                                <span class="array"> ,</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">
-                                Experience
-                                <span class="array"> ,</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#education">
-                                Education
-                                <span class="array"> ,</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="contacts" class="nav-link">
-                                Contact
-                                <span class="array">]</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<div id="notifications">
+    <div id="loadingBox" class="notification">
+        <span>Loading...</span>
+    </div>
+    <div id="infoBox" class="notification">
+        <span>Info</span>
+    </div>
+    <div id="errorBox" class="notification">
+        <span>Error</span>
     </div>
 </div>
 
-<!-- First part image -->
-<div class="container main">
-    <div class="row">
-        <!-- Start Left Content -->
-        <div class="general-info">
-            <div class="row mt-5 mb-5" height="500"></div>
-            <div class="padding-twenty-top sm-padding-fifteen-top xs-no-padding">
-                <h5 class="left-margin-15 no-margin font-size18 xs-font-size16 text-medium-gray">
-                    Hello, I am</h5>
-                <h1 class="left-margin-15 text-uppercase font-size48 md-font-size42 sm-font-size36 xs-font-size26 font-weight-700 margin-20px-bottom">
-                    Aleksandar<br>Hristov</h1>
-                <p class="left-margin-15 width-50 md-width-75 xs-width-100 font-size16 xs-font-size14 border-top border-bottom padding-10px-tb">
-                    Junior Frontend Developer</p>
-                <div class="social-links margin-30px-bottom xs-margin-20px-bottom">
-                    <a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a>
-                    <a href="javascript:void(0);"><i class="fab fa-twitter"></i></a>
-                    <a href="javascript:void(0);"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="javascript:void(0);"><i class="fab fa-dribbble"></i></a>
-                    <a href="javascript:void(0);"><i class="fab fa-youtube"></i></a>
-                    <a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <button id="cv" type="button" class="left-margin-15 btn btn-outline-primary my-btn mt-3"><span
-                        class="download">Download my CV ⭳</span></button>
-            </div>
-        </div>
-        <!-- Start Right Content -->
-        <div class="pic">
-            <img id="avatar" src="images/Avatar.png" height="500" align="right">
-        </div>
-    </div>
-</div>
-
-<!-- About -->
-<div class="container">
-    <h3 id="about"><p class="delimiter"></p>About = {</h3>
-    <blockquote class="blockquote">
-        <p class="mb-0"><span class="obj">info: </span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur culpa cumque ducimus ea eos hic illo libero placeat quae rerum, soluta sunt voluptate. Beatae delectus iusto saepe unde voluptatem.</span><span>Accusantium aliquam enim fuga maiores numquam! Aliquam asperiores autem dignissimos eveniet, expedita inventore ipsa laborum laudantium nihil, nisi numquam officiis placeat quaerat quisquam quod recusandae repellat repellendus saepe suscipit, ullam.</span><span>Ab, adipisci aperiam asperiores assumenda consequuntur dolor doloremque eaque enim hic id incidunt ipsam iste maxime necessitatibus nesciunt nisi nulla numquam perspiciatis, praesentium provident quos repellat sunt tempore ut veniam!</span><span>Culpa dignissimos ducimus ea enim ipsam, magni maiores officia optio perspiciatis, quaerat soluta voluptates. Adipisci aliquam at consequatur, dolorum eum incidunt ipsa molestias obcaecati omnis pariatur reiciendis rerum sed vero.</span><span>Adipisci aspernatur assumenda at blanditiis consequatur cum earum est expedita fugiat illum incidunt ipsa molestias non omnis provident quas quibusdam quis rerum sequi temporibus tenetur totam, vel voluptas voluptate voluptatibus?</span>
-        </p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        <h3>}</h3>
-    </blockquote>
-</div>
-
-<!-- Portfolio -->
-<div class="container">
-    <h3 id="portfolio"><p class="delimiter"></p>Portfolio = {</h3>
-    <blockquote class="blockquote">
-        <p class="mb-0"><span class="obj">info: </span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur illum magnam minima modi saepe? Aliquam architecto commodi consequatur cupiditate doloremque illo, illum ipsum minus nam, nobis quos repellendus suscipit temporibus.</span><span>Aliquid architecto asperiores blanditiis consequuntur culpa deserunt dolorem doloribus ea eaque eveniet explicabo facere ipsam iusto nemo nihil non, officiis, placeat quibusdam quisquam quo quos reiciendis repellendus saepe tenetur voluptate?</span><span>Distinctio dolores eum illo in necessitatibus odio qui quibusdam quod ratione sapiente. Aperiam beatae doloremque dolores et excepturi facilis illum iste molestiae obcaecati pariatur quaerat quia, saepe tempora tempore ullam.</span><span>Aliquam expedita impedit nam porro sint. Adipisci dolor dolorum fuga fugit, harum in, ipsam ipsum maiores obcaecati perferendis placeat quae quo, recusandae reiciendis sequi similique velit veniam! Ipsam, praesentium, quis.</span><span>Ad consequatur cupiditate dignissimos doloribus fugiat harum quam quia repellendus rerum voluptates. A aliquam atque beatae dolores doloribus expedita fugiat incidunt modi molestiae necessitatibus neque, odio officiis quasi veniam voluptates.</span><span>Atque distinctio fugit nesciunt. Aliquam aperiam aut cumque deserunt, dicta distinctio enim est, et fugiat impedit iusto maxime neque nesciunt perferendis porro quibusdam, quidem quo rem repudiandae sapiente tempore voluptate!</span><span>Autem blanditiis distinctio fugiat qui recusandae! Aliquam deleniti dolor eaque, et ipsam iste itaque magnam nisi perferendis praesentium quaerat quo repellendus vero voluptate voluptatibus. Architecto atque eius impedit laudantium numquam.</span><span>Alias iste, laboriosam laudantium molestiae necessitatibus quae sed. Aut culpa eum hic illum ipsa, quo. Architecto esse hic illum rerum ut voluptates? Accusamus, cum ea eaque eveniet obcaecati voluptatem voluptatum?</span><span>Asperiores consectetur distinctio maxime necessitatibus nesciunt numquam perspiciatis sapiente ut! Consequatur dicta ducimus eos ex expedita facere facilis ipsam, itaque laborum minus molestiae molestias nemo odio omnis provident quam vero?</span><span>Accusamus aliquid assumenda corporis dicta dolorem esse illum modi neque provident repudiandae sed, sit soluta vero. A aperiam cumque cupiditate incidunt magni modi provident quam qui reprehenderit suscipit ut, veritatis!</span><span>Accusantium at cum dolorem doloribus ducimus hic in laboriosam libero molestias mollitia, optio placeat praesentium, quibusdam, reiciendis repellendus tempore voluptatum. Ab blanditiis dolore id ipsam odit. Animi, enim, voluptates! Autem?</span><span>At atque culpa cum excepturi non placeat porro provident, quibusdam reiciendis vero. Amet aspernatur culpa dolore eligendi possimus quisquam repellat, temporibus veritatis! Aliquam assumenda at distinctio hic, modi officiis suscipit.</span><span>Accusamus at beatae deserunt doloribus eum ex incidunt ipsam magnam minus nobis repudiandae soluta totam veniam voluptate, voluptatibus? Asperiores, commodi eum harum illum molestiae molestias quae ratione recusandae sunt temporibus?</span><span>Blanditiis dolor ducimus expedita, illum libero nulla reiciendis temporibus ullam vitae voluptatum? Ab amet blanditiis commodi consequuntur, distinctio dolor ducimus ea excepturi, ipsum nobis omnis pariatur quam sequi veniam vero!</span><span>Amet eius totam unde velit. Cupiditate doloremque fugit ipsum laboriosam laborum perferendis repellendus. Accusantium dolor, dolorem error fugiat in iste iure, libero natus obcaecati perferendis quisquam sequi soluta ullam velit.</span></span>
-        </p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        <h3>}</h3>
-    </blockquote>
-</div>
-
-<!-- Experience -->
-<div class="container">
-    <h3 id="experience"><p class="delimiter"></p>Experience = {</h3>
-    <blockquote class="blockquote">
-        <p class="mb-0"><span class="obj">info: </span> <span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur illum magnam minima modi saepe? Aliquam architecto commodi consequatur cupiditate doloremque illo, illum ipsum minus nam, nobis quos repellendus suscipit temporibus.</span><span>Aliquid architecto asperiores blanditiis consequuntur culpa deserunt dolorem doloribus ea eaque eveniet explicabo facere ipsam iusto nemo nihil non, officiis, placeat quibusdam quisquam quo quos reiciendis repellendus saepe tenetur voluptate?</span><span>Distinctio dolores eum illo in necessitatibus odio qui quibusdam quod ratione sapiente. Aperiam beatae doloremque dolores et excepturi facilis illum iste molestiae obcaecati pariatur quaerat quia, saepe tempora tempore ullam.</span><span>Aliquam expedita impedit nam porro sint. Adipisci dolor dolorum fuga fugit, harum in, ipsam ipsum maiores obcaecati perferendis placeat quae quo, recusandae reiciendis sequi similique velit veniam! Ipsam, praesentium, quis.</span><span>Ad consequatur cupiditate dignissimos doloribus fugiat harum quam quia repellendus rerum voluptates. A aliquam atque beatae dolores doloribus expedita fugiat incidunt modi molestiae necessitatibus neque, odio officiis quasi veniam voluptates.</span><span>Atque distinctio fugit nesciunt. Aliquam aperiam aut cumque deserunt, dicta distinctio enim est, et fugiat impedit iusto maxime neque nesciunt perferendis porro quibusdam, quidem quo rem repudiandae sapiente tempore voluptate!</span><span>Autem blanditiis distinctio fugiat qui recusandae! Aliquam deleniti dolor eaque, et ipsam iste itaque magnam nisi perferendis praesentium quaerat quo repellendus vero voluptate voluptatibus. Architecto atque eius impedit laudantium numquam.</span><span>Alias iste, laboriosam laudantium molestiae necessitatibus quae sed. Aut culpa eum hic illum ipsa, quo. Architecto esse hic illum rerum ut voluptates? Accusamus, cum ea eaque eveniet obcaecati voluptatem voluptatum?</span><span>Asperiores consectetur distinctio maxime necessitatibus nesciunt numquam perspiciatis sapiente ut! Consequatur dicta ducimus eos ex expedita facere facilis ipsam, itaque laborum minus molestiae molestias nemo odio omnis provident quam vero?</span><span>Accusamus aliquid assumenda corporis dicta dolorem esse illum modi neque provident repudiandae sed, sit soluta vero. A aperiam cumque cupiditate incidunt magni modi provident quam qui reprehenderit suscipit ut, veritatis!</span><span>Accusantium at cum dolorem doloribus ducimus hic in laboriosam libero molestias mollitia, optio placeat praesentium, quibusdam, reiciendis repellendus tempore voluptatum. Ab blanditiis dolore id ipsam odit. Animi, enim, voluptates! Autem?</span><span>At atque culpa cum excepturi non placeat porro provident, quibusdam reiciendis vero. Amet aspernatur culpa dolore eligendi possimus quisquam repellat, temporibus veritatis! Aliquam assumenda at distinctio hic, modi officiis suscipit.</span><span>Accusamus at beatae deserunt doloribus eum ex incidunt ipsam magnam minus nobis repudiandae soluta totam veniam voluptate, voluptatibus? Asperiores, commodi eum harum illum molestiae molestias quae ratione recusandae sunt temporibus?</span><span>Blanditiis dolor ducimus expedita, illum libero nulla reiciendis temporibus ullam vitae voluptatum? Ab amet blanditiis commodi consequuntur, distinctio dolor ducimus ea excepturi, ipsum nobis omnis pariatur quam sequi veniam vero!</span><span>Amet eius totam unde velit. Cupiditate doloremque fugit ipsum laboriosam laborum perferendis repellendus. Accusantium dolor, dolorem error fugiat in iste iure, libero natus obcaecati perferendis quisquam sequi soluta ullam velit.</span></span>
-        </p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        <h3>}</h3>
-    </blockquote>
-</div>
-
-<!-- Education -->
-<div class="container">
-    <h3 id="education"><p class="delimiter"></p>Education = {</h3>
-    <blockquote class="blockquote">
-        <p class="mb-0"><span class="obj">info: </span><span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur illum magnam minima modi saepe? Aliquam architecto commodi consequatur cupiditate doloremque illo, illum ipsum minus nam, nobis quos repellendus suscipit temporibus.</span><span>Aliquid architecto asperiores blanditiis consequuntur culpa deserunt dolorem doloribus ea eaque eveniet explicabo facere ipsam iusto nemo nihil non, officiis, placeat quibusdam quisquam quo quos reiciendis repellendus saepe tenetur voluptate?</span><span>Distinctio dolores eum illo in necessitatibus odio qui quibusdam quod ratione sapiente. Aperiam beatae doloremque dolores et excepturi facilis illum iste molestiae obcaecati pariatur quaerat quia, saepe tempora tempore ullam.</span><span>Aliquam expedita impedit nam porro sint. Adipisci dolor dolorum fuga fugit, harum in, ipsam ipsum maiores obcaecati perferendis placeat quae quo, recusandae reiciendis sequi similique velit veniam! Ipsam, praesentium, quis.</span><span>Ad consequatur cupiditate dignissimos doloribus fugiat harum quam quia repellendus rerum voluptates. A aliquam atque beatae dolores doloribus expedita fugiat incidunt modi molestiae necessitatibus neque, odio officiis quasi veniam voluptates.</span><span>Atque distinctio fugit nesciunt. Aliquam aperiam aut cumque deserunt, dicta distinctio enim est, et fugiat impedit iusto maxime neque nesciunt perferendis porro quibusdam, quidem quo rem repudiandae sapiente tempore voluptate!</span><span>Autem blanditiis distinctio fugiat qui recusandae! Aliquam deleniti dolor eaque, et ipsam iste itaque magnam nisi perferendis praesentium quaerat quo repellendus vero voluptate voluptatibus. Architecto atque eius impedit laudantium numquam.</span><span>Alias iste, laboriosam laudantium molestiae necessitatibus quae sed. Aut culpa eum hic illum ipsa, quo. Architecto esse hic illum rerum ut voluptates? Accusamus, cum ea eaque eveniet obcaecati voluptatem voluptatum?</span><span>Asperiores consectetur distinctio maxime necessitatibus nesciunt numquam perspiciatis sapiente ut! Consequatur dicta ducimus eos ex expedita facere facilis ipsam, itaque laborum minus molestiae molestias nemo odio omnis provident quam vero?</span><span>Accusamus aliquid assumenda corporis dicta dolorem esse illum modi neque provident repudiandae sed, sit soluta vero. A aperiam cumque cupiditate incidunt magni modi provident quam qui reprehenderit suscipit ut, veritatis!</span><span>Accusantium at cum dolorem doloribus ducimus hic in laboriosam libero molestias mollitia, optio placeat praesentium, quibusdam, reiciendis repellendus tempore voluptatum. Ab blanditiis dolore id ipsam odit. Animi, enim, voluptates! Autem?</span><span>At atque culpa cum excepturi non placeat porro provident, quibusdam reiciendis vero. Amet aspernatur culpa dolore eligendi possimus quisquam repellat, temporibus veritatis! Aliquam assumenda at distinctio hic, modi officiis suscipit.</span><span>Accusamus at beatae deserunt doloribus eum ex incidunt ipsam magnam minus nobis repudiandae soluta totam veniam voluptate, voluptatibus? Asperiores, commodi eum harum illum molestiae molestias quae ratione recusandae sunt temporibus?</span><span>Blanditiis dolor ducimus expedita, illum libero nulla reiciendis temporibus ullam vitae voluptatum? Ab amet blanditiis commodi consequuntur, distinctio dolor ducimus ea excepturi, ipsum nobis omnis pariatur quam sequi veniam vero!</span><span>Amet eius totam unde velit. Cupiditate doloremque fugit ipsum laboriosam laborum perferendis repellendus. Accusantium dolor, dolorem error fugiat in iste iure, libero natus obcaecati perferendis quisquam sequi soluta ullam velit.</span></span>
-        </p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-        <h3>}</h3>
-    </blockquote>
-</div>
-
-<!-- ------------------------------------------------------------------------------ -->
-
-
-<!-- jQuery script -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <!-- popper script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -166,9 +64,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<!-- my JS script -->
-<script src="./script.js"></script>
-<script> attachEvents() </script>
+
 
 </body>
 
