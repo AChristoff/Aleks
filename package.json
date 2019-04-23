@@ -1,0 +1,14 @@
+{
+  "name": "Test",
+  "version": "1.0.0",
+  "homepage": "https://achristoff.github.io/Aleks",
+  "scripts": {
+    "deploy": "gh-pages -d Aleks-Page"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "handlebars": "^4.1.1",
+    "jquery": "^3.3.1",
+    "sammy": "^0.7.6"
+  }
+}
