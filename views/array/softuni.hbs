@@ -1,0 +1,15 @@
+{{> header}}
+<div class="container education">
+    <div class="row">
+        <div class="col text-center">
+            <h2>SoftUni</h2>
+            <br>
+            <div id="certificates">
+                {{#each certificates}}
+                    {{> certificate}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}

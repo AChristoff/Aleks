@@ -83,7 +83,7 @@ footer {
 
 /*Certificates styles*/
 div#certificates {
-    display: none;
+    display: flex;
     justify-content: start;
     flex-wrap: wrap;
     width: 100%;
@@ -100,17 +100,38 @@ div#certificate {
     width: 250px;
 }
 
-#enlarge {
-    transition:transform 0.25s ease;
+.cert-details {
+    width: 70%;
     border: 1px solid #ddd;
     padding: 5px;
+    margin: 20px;
     background: white;
 }
 
-#enlarge:hover {
+div#certificate-details {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+}
+
+.enlarge {
+    transition:transform 0.25s ease;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 20px;
+    background: white;
+}
+
+.enlarge:hover {
     -webkit-transform:scale(1.5); /* or some other value */
     transform:scale(1.5);
     box-shadow: 0 0 2px 1px rgba(183, 183, 183, 0.5);
+}
+
+.verify {
+    margin-bottom: 60px;
+    font-size: 15px;
 }
 
 

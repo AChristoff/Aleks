@@ -5,17 +5,8 @@
             <h2>Education</h2>
             <br>
                 <img src="./images/Softuni.png" style="width: 170px; margin-right: 10px">
-                    <button id="showCertificates" type="button" class="btn btn-outline-primary btn-sm">Show certificates
-                    </button>
+                    <button id="showCertificates" type="button" class="btn btn-outline-primary btn-sm" onclick="window.location.href='#/softuni'">More info</button>
             <br>
-            <br>
-            <br>
-            <div id="certificates">
-                {{#each certificates}}
-                    {{> certificate}}
-                {{/each}}
-                <script>showCertificates()</script>
-            </div>
         </div>
     </div>
 </div>

@@ -1,5 +1,29 @@
-controllers.getCertificates = function (context) {
+controllers.getEducation = function (context) {
 
+    context.isAuth = userService.isAuth();
+    context.username = sessionStorage.getItem('username');
+
+    if (userService.isAuth()) {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs',
+        }).then(function () {
+            this.partial('./views/array/education.hbs')
+        });
+
+    } else {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs'
+        }).then(function () {
+            this.partial('./views/common/permissions.hbs')
+        }).catch(err => console.log(err))
+    }
+};
+
+controllers.getSoftUni = function (context) {
     context.isAuth = userService.isAuth();
     context.username = sessionStorage.getItem('username');
 
@@ -7,7 +31,7 @@ controllers.getCertificates = function (context) {
 
         infoService.getMyCertificates()
             .then((res) => {
-                console.log(res);
+
                 context.certificates = res;
 
                 context.loadPartials({
@@ -15,7 +39,7 @@ controllers.getCertificates = function (context) {
                     footer: './views/common/footer.hbs',
                     certificate: './views/array/certificate.hbs',
                 }).then(function () {
-                    this.partial('./views/array/education.hbs')
+                    this.partial('./views/array/softuni.hbs')
                 });
             })
 
@@ -27,7 +51,40 @@ controllers.getCertificates = function (context) {
         }).then(function () {
             this.partial('./views/common/permissions.hbs')
         }).catch(err => console.log(err))
-
     }
+};
 
+controllers.getCertificateDetails = function (context) {
+    context.isAuth = userService.isAuth();
+    context.username = sessionStorage.getItem('username');
+    let certificateID = context.params.id;
+
+    if (userService.isAuth()) {
+
+        infoService.getCertificate(certificateID)
+            .then((res) => {
+
+                context._id = certificateID;
+                context.module = res.module;
+                context.description = res.description;
+                context.firstUrl = res.url[0];
+                context.secondUrl = res.url[1];
+
+                context.loadPartials({
+                    header: './views/common/header.hbs',
+                    footer: './views/common/footer.hbs',
+                }).then(function () {
+                    this.partial('./views/array/certificateDetails.hbs')
+                });
+            })
+
+    } else {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs'
+        }).then(function () {
+            this.partial('./views/common/permissions.hbs')
+        }).catch(err => console.log(err))
+    }
 };

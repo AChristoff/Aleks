@@ -4,6 +4,9 @@ const infoService = (() => {
         return kinvey.get('appdata', `modules?query={}&sort={"date": -1}`, 'kinvey')
     }
 
+    function getCertificate(certificateID) {
+        return kinvey.get('appdata', `modules/${certificateID}`, 'kinvey');
+    }
 
     function getGenre(genre) {
         return kinvey.get('appdata', `movies?query={"genres":{"$regex":"^.*${genre}.*"}}`, 'kinvey')
@@ -21,9 +24,6 @@ const infoService = (() => {
         return kinvey.update('appdata', `movies/${movieID}`, 'kinvey', updatedMovieObj)
     }
 
-    function getMovie(movieID) {
-        return kinvey.get('appdata', `movies/${movieID}`, 'kinvey');
-    }
 
     // function sortMovies(movie) {
     //
@@ -36,11 +36,11 @@ const infoService = (() => {
 
     return {
         getMyCertificates,
+        getCertificate,
         getGenre,
         createMovie,
         removeMovie,
         editMovie,
-        getMovie,
         //sortMovies,
     }
 

@@ -1,0 +1,17 @@
+{{> header}}
+<div class="container education">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="margin-bottom: 20px;">Details</h2>
+            <div id="certificate-details">
+                <h5 style="color: #919AA1;">Module:</h5>
+                <h5>{{module}}</h5>
+                <img class="cert-details" src="{{firstUrl}}">
+                <img class="cert-details" src="{{secondUrl}}">
+                <p class="verify" >Verification link:<br><a style="color: #1A1A1A;" href="{{description}}" target="_blank">{{description}}</a></p>
+                <button style="margin-bottom: 50px" type="button" class="btn btn-outline-primary btn-sm" onclick="window.location.href='#/softuni'">Back to SoftUni</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}
