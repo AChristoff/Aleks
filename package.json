@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://achristoff.github.io/Aleks",
   "scripts": {
+    "predeploy": "npm run dist",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
