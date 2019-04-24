@@ -26,6 +26,9 @@ $(() => {
         this.get('#/education', controllers.getEducation);
         this.get('#/softuni', controllers.getSoftUni);
         this.get('#/details/:id', controllers.getCertificateDetails);
+
+        //contacts rout
+        this.get('#/contacts', controllers.getContacts);
     });
     app.run('#/home');
 });

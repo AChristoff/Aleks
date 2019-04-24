@@ -6,7 +6,7 @@ footer {
     border-top: solid #E5E5E5 1px;
     position: relative;
     bottom: 0;
-    margin-top: -30px;
+    margin-top: -37px;
     text-align: center;
     text-transform: uppercase;
     font-size: 11px;
@@ -16,12 +16,8 @@ footer {
     background: white;
 }
 
-#root {
-    height: 100vh;
-}
-
-div.container {
-    min-height: 86.5%;
+div#root {
+    min-height: 100%;
 }
 
 .align-right {
@@ -32,12 +28,10 @@ div.container {
     padding-top: 7px;
 }
 
-.register, .login, .permissions, .education {
-    padding-top: 70px;
-}
-
-.home {
-    padding-top: 120px;
+.array {
+    margin-top: -91px;
+    min-height: 100vh;
+    padding-top: 160px;
 }
 
 #nav {
@@ -138,8 +132,12 @@ div#certificate-details {
 }
 
 .verify {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     font-size: 15px;
+}
+
+.contact-icons {
+    margin-bottom: 20px;
 }
 
 #nav {
@@ -161,7 +159,12 @@ div#certificate-details {
     transform: translateY(100px)
 }
 
-
+.icons {
+    background-color: white;
+    text-decoration: none;
+    width: 40px;
+    margin: 5px;
+}
 
 
 

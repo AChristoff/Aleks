@@ -34,7 +34,7 @@ controllers.postRegister = function (context) {
         .then((res) => {
             userService.saveSession(res);
             context.redirect('#/home');
-            notify.showSuccess('Registration is successful');
+            notify.showSuccess('Registration is successful. You are now Logged in. Enjoy my website!');
         }).catch((err) => {
             notify.handleError(err);
     });
@@ -60,7 +60,7 @@ controllers.postLogin = function (context) {
         .then((res) => {
             userService.saveSession(res);
             context.redirect('#/home');
-            notify.showSuccess('Login successful');
+            notify.showSuccess('You are now Logged in. Enjoy my website!');
         }).catch((err) => {
 
         let loginUsername = $('#loginUsername');
@@ -86,6 +86,6 @@ controllers.getLogout = function (context) {
         .then(() => {
             sessionStorage.clear();
             context.redirect('#/home');
-            notify.showSuccess('Logout successful');
+            notify.showSuccess('Logout successful. Thank you for visiting my website!');
         }).catch((err) => console.log(err));
 };

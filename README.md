@@ -1,4 +1,3 @@
-# Aleks
 # My personal page
 
 - Under construction!

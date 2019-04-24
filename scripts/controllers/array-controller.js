@@ -9,7 +9,7 @@ controllers.getEducation = function (context) {
             header: './views/common/header.hbs',
             footer: './views/common/footer.hbs',
         }).then(function () {
-            this.partial('./views/array/education.hbs')
+            this.partial('./views/array/education/education.hbs')
         });
 
     } else {
@@ -37,9 +37,9 @@ controllers.getSoftUni = function (context) {
                 context.loadPartials({
                     header: './views/common/header.hbs',
                     footer: './views/common/footer.hbs',
-                    certificate: './views/array/certificate.hbs',
+                    certificate: './views/array/education/certificate.hbs',
                 }).then(function () {
-                    this.partial('./views/array/softuni.hbs')
+                    this.partial('./views/array/education/softuni.hbs')
                 });
             })
 
@@ -74,9 +74,34 @@ controllers.getCertificateDetails = function (context) {
                     header: './views/common/header.hbs',
                     footer: './views/common/footer.hbs',
                 }).then(function () {
-                    this.partial('./views/array/certificateDetails.hbs')
+                    this.partial('./views/array/education/certificateDetails.hbs')
                 });
             })
+
+    } else {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs'
+        }).then(function () {
+            this.partial('./views/common/permissions.hbs')
+        }).catch(err => console.log(err))
+    }
+};
+
+controllers.getContacts = function (context) {
+
+    context.isAuth = userService.isAuth();
+    context.username = sessionStorage.getItem('username');
+
+    if (userService.isAuth()) {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs',
+        }).then(function () {
+            this.partial('./views/array/contacts/contacts.hbs')
+        });
 
     } else {
 

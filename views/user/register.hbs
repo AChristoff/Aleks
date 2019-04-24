@@ -1,11 +1,11 @@
 {{> header}}
 
-<div class="container register">
+<div class="container array">
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
             <form action="#/register" method="POST">
-            <h2>Register</h2>
+            <h2 style="text-align: center">Register</h2>
                 <br>
                 <fieldset>
                     <div class="form-group">
@@ -21,7 +21,9 @@
                         <input type="password" name="repeatPassword" class="form-control" id="registerRepeatPassword" placeholder="">
                     </div>
                     <br>
+                    <div style="text-align: center">
                     <button type="submit" class="btn btn-outline-primary">Register</button>
+                    </div>
                 </fieldset>
             </form>
             <script>registerValidation()</script>
