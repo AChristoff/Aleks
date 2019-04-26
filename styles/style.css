@@ -166,5 +166,16 @@ div#certificate-details {
     margin: 5px;
 }
 
+.pm-open:hover,
+.pm-closed:hover,
+.head-open:hover,
+.head-closed:hover,
+.eng-open:hover,
+.eng-closed:hover {
+    cursor: pointer;
+}
 
+.job:hover {
+    color: #1A1A1A;
+}
 

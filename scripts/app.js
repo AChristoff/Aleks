@@ -29,6 +29,10 @@ $(() => {
 
         //contacts rout
         this.get('#/contacts', controllers.getContacts);
+
+        //experience rout
+        this.get('#/experience', controllers.getExperience);
+
     });
     app.run('#/home');
 });

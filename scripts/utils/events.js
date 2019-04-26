@@ -55,23 +55,27 @@ function loginValidation() {
     });
 }
 
-function showCertificates() {
+function showJobInfo(job) {
 
-    let showBtn = $('#showCertificates');
-    showBtn.on('click', () => {
-        let certificates = $('div#certificates');
-        if (!certificates.is(':visible')) {
-            certificates.css('display', 'flex');
-            showBtn.text('Hide certificates');
-        } else {
-            certificates.css('display', 'none');
-            showBtn.text('Show certificates');
-        }
-    });
+    let jobInfoClosed = $(`.${job}-closed`);
+    let jobInfoOpen = $(`.${job}-open`);
+
+    if (!jobInfoOpen.is(':visible')) {
+        jobInfoOpen.css('display', 'block');
+        jobInfoClosed.css('display', 'none');
+    } else {
+        jobInfoOpen.css('display', 'none');
+        jobInfoClosed.css('display', 'block');
+    }
+
 }
 
 let goTop = function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
+
+function showExp() {
+    console.log('exp');
+}
 
