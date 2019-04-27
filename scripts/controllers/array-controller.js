@@ -31,7 +31,7 @@ controllers.getSoftUni = function (context) {
 
         infoService.getMyCertificates()
             .then((res) => {
-
+                console.log(res);
                 context.certificates = res;
 
                 context.loadPartials({
