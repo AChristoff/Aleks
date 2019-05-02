@@ -26,12 +26,14 @@ $(() => {
         this.get('#/education', controllers.getEducation);
         this.get('#/softuni', controllers.getSoftUni);
         this.get('#/details/:id', controllers.getCertificateDetails);
+        this.get('#/ltu', controllers.getLtu);
 
         //contacts rout
         this.get('#/contacts', controllers.getContacts);
 
         //experience rout
         this.get('#/experience', controllers.getExperience);
+        this.get('#/job-description/:id', controllers.getJobDescription);
 
     });
     app.run('#/home');

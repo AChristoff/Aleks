@@ -1,0 +1,176 @@
+{{> header}}
+
+<div class="container array">
+    <div class="row">
+        <div class="col text-center">
+            <h2 style="margin-bottom: 5px">{{company}}</h2>
+            <h6 style="margin-bottom: 20px">{{years}}</h6>
+            <br>
+        </div>
+    </div>
+
+    {{#if vid}}
+        <div class="row" style="margin-bottom: 10px">
+
+            <div class="col-3" align="right" style="color: #b7b7b7; padding: 2px; font-size: 17px">
+                <p style="margin-bottom: 5px;">const <span style="color: #1A1A1A" class="showInfo"
+                                                           onclick="showJobInfo('pm')">{{title.[0]}} =</span></p>
+            </div>
+
+            <div class="col-6 pm-closed" style="color: #1A1A1A; padding: 2px; font-size: 17px; display: block">
+                <p class="showInfo" onclick="showJobInfo('pm')" style="margin-bottom: 5px; width: 35px">{...};</p>
+            </div>
+
+            <div class="col-6 pm-open showInfo" onclick="showJobInfo('pm')" style="display: none; padding: 2px; margin-bottom: 20px">
+                <p style="margin-bottom: 5px; color: #1A1A1A; font-size: 17px">{</p>
+                <p style="margin-bottom: 5px">period: "{{period.[0]}}",</p>
+                <p style="margin-bottom: 5px">department: "{{department.[0]}}",</p>
+                <p style="margin-bottom: 5px">responsibilities: </p>
+                <span>"</span>
+                <ul style="padding-left: 30px; margin-top: -20px; margin-bottom: 0px">
+                    {{#each responsibilities.[0]}}
+                        <li style="padding-bottom: 5px">{{this}}</li>
+                    {{/each}}
+                </ul>
+                <span style="color: #1A1A1A; font-size: 17px;">};</span>
+            </div>
+
+            <div class="col-3"></div>
+
+        </div>
+
+        <div class="row" style="margin-bottom: 10px">
+
+        <div class="col-3" align="right" style="color: #b7b7b7; padding: 2px; font-size: 17px">
+            <p style="margin-bottom: 5px;">const <span style="color: #1A1A1A" class="showInfo"
+                                                       onclick="showJobInfo('head')">{{title.[1]}} =</span></p>
+        </div>
+
+
+        <div class="col-6 head-closed" style="color: #1A1A1A; padding: 2px; font-size: 17px; display: block">
+            <p class="showInfo" onclick="showJobInfo('head')" style="margin-bottom: 5px; width: 35px">{...};</p>
+        </div>
+
+        <div class="col-6 head-open showInfo" onclick="showJobInfo('head')" style="display: none; padding: 2px; margin-bottom: 20px">
+            <p style="margin-bottom: 5px; color: #1A1A1A; font-size: 17px">{</p>
+            <p style="margin-bottom: 5px">period: "{{period.[1]}}",</p>
+            <p style="margin-bottom: 5px">department: "{{department.[1]}}",</p>
+            <p style="margin-bottom: 5px">responsibilities: </p>
+            <span>"</span>
+            <ul style="padding-left: 30px; margin-top: -20px">
+                {{#each responsibilities.[1]}}
+                    <li style="padding-bottom: 5px">{{this}}</li>
+                {{/each}}
+            </ul>
+            <span style="color: #1A1A1A; font-size: 17px">};</span>
+        </div>
+
+        <div class="col-3"></div>
+
+    </div>
+
+        <div class="row" style="margin-bottom: 80px">
+
+            <div class="col-3" align="right" style="color: #b7b7b7; padding: 2px; font-size: 17px">
+                <p style="margin-bottom: 5px;">const <span style="color: #1A1A1A" class="showInfo"
+                                                           onclick="showJobInfo('eng')">{{title.[2]}} =</span></p>
+            </div>
+
+
+            <div class="col-6 eng-closed" style="color: #1A1A1A; padding: 2px; font-size: 17px; display: block">
+                <p class="showInfo job" onclick="showJobInfo('eng')" style="margin-bottom: 5px; width: 35px">{...};</p>
+            </div>
+
+            <div class="col-6 eng-open showInfo" onclick="showJobInfo('eng')" style="display: none; padding: 2px; margin-bottom: 30px">
+                <p style="margin-bottom: 5px; color: #1A1A1A; font-size: 17px">{</p>
+                <p style="margin-bottom: 5px">period: "{{period.[2]}}",</p>
+                <p style="margin-bottom: 5px">department: "{{department.[2]}}",</p>
+                <p style="margin-bottom: 5px">responsibilities: </p>
+                <span>"</span>
+                <ul style="padding-left: 30px; margin-top: -20px">
+                    {{#each responsibilities.[2]}}
+                        <li style="padding-bottom: 5px">{{this}}</li>
+                    {{/each}}
+                </ul>
+                <span style="color: #1A1A1A; font-size: 17px">};</span>
+            </div>
+
+            <div class="col-3"></div>
+
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <hr>
+                <p style="color: #1A1A1A; font-size: 18px">Projects I am proud with:</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-4">
+                <p>The Biggest Gym in the US<br>(Earth Treks Englewood)</p>
+                <iframe width="260" height="146" src="https://www.youtube.com/embed/nvKaSSG2shg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="col-4">
+                <p>The Biggest Gym in the World<br>(Kletterzentrum - Austria)</p>
+                <iframe width="260" height="146" src="https://www.youtube.com/embed/Jvb6obg_gkU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="col-4">
+                <p>Psicobloc Masters wall<br>(Park City, Utah, USA)</p>
+                <iframe width="260" height="146" src="https://www.youtube.com/embed/qKwrTBJDtUM" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    {{else}}
+        <div class="row" style="margin-bottom: 10px">
+
+            <div class="col-3" align="right" style="color: #b7b7b7; padding: 2px; font-size: 17px">
+                <p style="margin-bottom: 5px;">const <span style="color: #1A1A1A" class="showInfo"
+                                                           onclick="showJobInfo('pm')">{{title.[0]}} =</span></p>
+            </div>
+
+            <div class="col-6 pm-closed" style="color: #1A1A1A; padding: 2px; font-size: 17px; display: block">
+                <p class="showInfo" onclick="showJobInfo('pm')" style="margin-bottom: 5px; width: 35px">{...};</p>
+            </div>
+
+            <div class="col-6 pm-open showInfo" onclick="showJobInfo('pm')" style="display: none; padding: 2px; margin-bottom: 20px">
+                <p style="margin-bottom: 5px; color: #1A1A1A; font-size: 17px">{</p>
+                <p style="margin-bottom: 5px">period: "{{period.[0]}}",</p>
+                <p style="margin-bottom: 5px">department: "{{department.[0]}}",</p>
+                <p style="margin-bottom: 5px">responsibilities: </p>
+                <span>"</span>
+                <ul style="padding-left: 30px; margin-top: -20px; margin-bottom: 0px">
+                    {{#each responsibilities.[0]}}
+                        <li style="padding-bottom: 5px">{{this}}</li>
+                    {{/each}}
+                </ul>
+                <span style="color: #1A1A1A; font-size: 17px;">};</span>
+            </div>
+
+            <div class="col-3"></div>
+
+        </div>
+    {{/if}}
+    <div class="row">
+
+        <div class="col-3"></div>
+
+        <div class="col-6 text-center">
+            <button style="margin-bottom: 80px; margin-top: 30px" type="button" class="btn btn-outline-primary btn-sm"
+                    onclick="window.location.href='#/experience'">Back to Experience
+            </button>
+        </div>
+
+        <div class="col-3"></div>
+
+    </div>
+</div>
+
+
+{{> footer}}

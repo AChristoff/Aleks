@@ -170,6 +170,10 @@ div#certificate-details {
     cursor: pointer;
 }
 
+.job {
+    color: #919AA1;
+}
+
 .job:hover {
     color: #1A1A1A;
 }

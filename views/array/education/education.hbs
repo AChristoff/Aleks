@@ -4,9 +4,10 @@
         <div class="col text-center">
             <h2>Education</h2>
             <br>
-                <img src="./images/Softuni.png" style="width: 170px; margin-right: 10px">
-                    <button id="showCertificates" type="button" class="btn btn-outline-primary btn-sm" onclick="window.location.href='#/softuni'">More info</button>
             <br>
+            {{# each educations}}
+                {{> education}}
+            {{/each}}
         </div>
     </div>
 </div>

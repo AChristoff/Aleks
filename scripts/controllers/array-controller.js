@@ -5,12 +5,18 @@ controllers.getEducation = function (context) {
 
     if (userService.isAuth()) {
 
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs',
-        }).then(function () {
-            this.partial('./views/array/education/education.hbs')
-        });
+        infoService.getEducation()
+            .then((res) => {
+                context.educations = res;
+
+                context.loadPartials({
+                    header: './views/common/header.hbs',
+                    footer: './views/common/footer.hbs',
+                    education: './views/array/education/universities.hbs',
+                }).then(function () {
+                    this.partial('./views/array/education/education.hbs')
+                });
+            })
 
     } else {
 
@@ -55,16 +61,18 @@ controllers.getSoftUni = function (context) {
 };
 
 controllers.getCertificateDetails = function (context) {
+
     context.isAuth = userService.isAuth();
     context.username = sessionStorage.getItem('username');
     let certificateID = context.params.id;
-
     if (userService.isAuth()) {
 
         infoService.getCertificate(certificateID)
             .then((res) => {
 
                 context._id = certificateID;
+                context.ltu = res.ltu;
+                console.log(context.ltu);
                 context.module = res.module;
                 context.description = res.description;
                 context.firstUrl = res.url[0];
@@ -75,6 +83,39 @@ controllers.getCertificateDetails = function (context) {
                     footer: './views/common/footer.hbs',
                 }).then(function () {
                     this.partial('./views/array/education/certificateDetails.hbs')
+                });
+            })
+
+    } else {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs'
+        }).then(function () {
+            this.partial('./views/common/permissions.hbs')
+        }).catch(err => console.log(err))
+    }
+};
+
+
+controllers.getLtu = function (context) {
+
+    context.isAuth = userService.isAuth();
+    context.username = sessionStorage.getItem('username');
+
+    if (userService.isAuth()) {
+
+        infoService.getMyCertificates()
+            .then((res) => {
+                console.log(res);
+                context.certificates = res;
+
+                context.loadPartials({
+                    header: './views/common/header.hbs',
+                    footer: './views/common/footer.hbs',
+                    certificate: './views/array/education/certificate.hbs',
+                }).then(function () {
+                    this.partial('./views/array/education/ltu.hbs')
                 });
             })
 
@@ -121,12 +162,19 @@ controllers.getExperience =  function (context) {
 
     if (userService.isAuth()) {
 
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs',
-        }).then(function () {
-            this.partial('./views/array/experience/experience.hbs')
-        });
+        infoService.getJobs()
+            .then((res) => {
+                console.log(res);
+                context.jobs = res;
+
+                context.loadPartials({
+                    header: './views/common/header.hbs',
+                    footer: './views/common/footer.hbs',
+                    job: './views/array/experience/jobs.hbs',
+                }).then(function () {
+                    this.partial('./views/array/experience/experience.hbs')
+                });
+            })
 
     } else {
 
@@ -137,6 +185,51 @@ controllers.getExperience =  function (context) {
             this.partial('./views/common/permissions.hbs')
         }).catch(err => console.log(err))
     }
+};
 
 
+
+controllers.getJobDescription =  function (context) {
+
+    context.isAuth = userService.isAuth();
+    context.username = sessionStorage.getItem('username');
+    let jobID = context.params.id;
+
+    infoService.getJobs()
+        .then((res) => {
+          context.jobs = res;
+        });
+
+    if (userService.isAuth()) {
+
+        infoService.getJobDescription(jobID)
+            .then((res) => {
+                context.vid = res.vid;
+                context.years = res.years;
+                context.title = res.title;
+                context.period = res.period;
+                context.department = res.department;
+                context.responsibilities = res.responsibilities;
+
+
+                context._id = jobID;
+                context.company = res.company;
+
+                context.loadPartials({
+                    header: './views/common/header.hbs',
+                    footer: './views/common/footer.hbs',
+                }).then(function () {
+                    this.partial('./views/array/experience/jobDescription.hbs')
+                });
+            })
+
+    } else {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs'
+        }).then(function () {
+            this.partial('./views/common/permissions.hbs')
+        }).catch(err => console.log(err))
+    }
 };

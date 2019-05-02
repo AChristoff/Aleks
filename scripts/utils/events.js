@@ -75,7 +75,4 @@ let goTop = function topFunction() {
     document.documentElement.scrollTop = 0;
 };
 
-function showExp() {
-    console.log('exp');
-}
 

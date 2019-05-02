@@ -2,15 +2,14 @@
 <div class="container array">
     <div class="row">
         <div class="col text-center">
-            <h2>Software University</h2>
-            <h6 style="margin-bottom: 20px">2 years</h6>
+            <h2>University Of Forestry</h2>
+            <h6 style="margin-bottom: 20px">4 years - Graduate with honors</h6>
             <br>
             <div id="certificates">
                 {{#each certificates}}
-                    {{#if ltu}}
-                    {{else}}
-                    {{> certificate}}
-                        {{/if}}
+                    {{# if ltu}}
+                        {{> certificate}}
+                    {{/if}}
                 {{/each}}
             </div>
         </div>

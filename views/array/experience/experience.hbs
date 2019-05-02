@@ -1,103 +1,14 @@
 {{> header}}
-
 <div class="container array">
     <div class="row">
         <div class="col text-center">
-            <h2 style="margin-bottom: 20px">WALLTOPIA</h2>
+            <h2>Experience</h2>
             <br>
+            <br>
+            {{# each jobs}}
+                {{> job}}
+            {{/each}}
         </div>
-    </div>
-
-
-    <div class="row">
-
-        <div class="col-3" align="right" style="color: #b7b7b7; padding: 2px; font-size: 17px">
-            <p style="margin-bottom: 5px;">const <span style="color: #1A1A1A" class="showInfo job"
-                                                       onclick="showJobInfo('pm')">projectManager =</span></p>
-        </div>
-
-
-        <div class="col-6 pm-closed" style="color: #1A1A1A; padding: 2px; font-size: 17px; display: block">
-            <p class="showInfo job" onclick="showJobInfo('pm')" style="margin-bottom: 5px; width: 35px">{...};</p>
-        </div>
-
-        <div class="col-6 pm-open" onclick="showJobInfo('pm')" style="display: none; padding: 2px">
-            <p style="margin-bottom: 5px; color: #1A1A1A; font-size: 17px">{</p>
-            <p style="margin-bottom: 5px">"05.2018 - 04.2019",</p>
-            <p style="margin-bottom: 5px">"PM",</p>
-            <span>"</span>
-            <ul style="padding-left: 30px; margin-top: -20px">
-                <li style="padding-bottom: 5px">Complete organization of the project timeline from beginning to end,
-                    based on the implementation deadline.
-                </li>
-                <li style="padding-bottom: 5px">Keeping in touch with customers.</li>
-                <li style="padding-bottom: 5px">Weekly reports preparation for customers with information on the current
-                    status and schedule of
-                    their projects.
-                </li>
-                <li style="padding-bottom: 5px">Presence at management briefings with completed reports on the work done
-                    and an implementation
-                    plan
-                    of the forthcoming project work according to the deadlines.
-                </li>
-                <li style="padding-bottom: 5px">Tracking of all engineering stages and their timely completion.</li>
-                <li style="padding-bottom: 5px">Production processes supervision and their timely completion
-                    tracking.
-                </li>
-                <li style="padding-bottom: 5px">Requesting and selecting transport for all materials.</li>
-                <li style="padding-bottom: 5px">Checking for missing specification items on the day of loading.</li>
-                <li style="padding-bottom: 5px">Providing tickets, lodgings and machines needed for groups of
-                    technicians in different
-                    countries.
-                </li>
-                <li style="padding-bottom: 5px">Instruction of technicians before their departure.</li>
-                <li style="padding-bottom: 5px">Available for permanent contact with groups of technicians 24/7.
-                </li>
-                <li style="padding-bottom: 5px">Where necessary, presence at the installation site for
-                    decision-making on urgent problems.
-                </li>
-                <li style="padding-bottom: 5px">Calculation of the technicians’work after completion of the
-                    project.
-                </li>
-                <li>Working in a dynamic and multicultural environment."</li>
-            </ul>
-            <span style="color: #1A1A1A; font-size: 17px">};</span>
-        </div>
-
-
-        <div class="col-3">
-            <p style="color: #1A1A1A; font-size: 18px">Projects I am proud with:</p>
-
-            <p>The Biggest Gym in the US<br>(Earth Treks Englewood)</p>
-            <iframe width="260" height="146" src="https://www.youtube.com/embed/nvKaSSG2shg" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            <hr>
-            <p>The Biggest Gym in the World<br>(Kletterzentrum - Austria)</p>
-            <iframe width="260" height="146" src="https://www.youtube.com/embed/Jvb6obg_gkU" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            <hr>
-            <p>Psicobloc Masters wall<br>(Park City, Utah, USA)</p>
-            <iframe width="260" height="146" src="https://www.youtube.com/embed/qKwrTBJDtUM" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <div class="col-3"></div>
-
-        <div class="col-6 text-center">
-            <button style="margin-bottom: 80px; margin-top: 30px" type="button" class="btn btn-outline-primary btn-sm" onclick="window.location.href='#/experience'" >Back to Education</button>
-        </div>
-
-        <div class="col-3"></div>
-
     </div>
 </div>
-
-
 {{> footer}}
