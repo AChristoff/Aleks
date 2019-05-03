@@ -233,3 +233,36 @@ controllers.getJobDescription =  function (context) {
         }).catch(err => console.log(err))
     }
 };
+
+
+controllers.getPortfolio = function (context) {
+
+    context.isAuth = userService.isAuth();
+    context.username = sessionStorage.getItem('username');
+
+    if (userService.isAuth()) {
+
+        infoService.getProjects()
+            .then((res) => {
+                console.log(res);
+                context.projects = res;
+
+                context.loadPartials({
+                    header: './views/common/header.hbs',
+                    footer: './views/common/footer.hbs',
+                    project: './views/array/portfolio/project.hbs',
+                }).then(function () {
+                    this.partial('./views/array/portfolio/portfolio.hbs')
+                });
+            })
+
+    } else {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs'
+        }).then(function () {
+            this.partial('./views/common/permissions.hbs')
+        }).catch(err => console.log(err))
+    }
+};

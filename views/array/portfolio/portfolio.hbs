@@ -1,0 +1,16 @@
+{{> header}}
+<div class="container array">
+    <div class="row">
+        <div class="col text-center">
+            <h2>Portfolio</h2>
+            <br>
+            <br>
+            <div id="projects" style="padding-left: 70px">
+                {{# each projects}}
+                    {{> project}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}
