@@ -69,7 +69,7 @@ div#root {
 }
 
 .let {
-    text-transform: lowercase;
+    text-transform: none;
 }
 
 .const {
@@ -183,6 +183,8 @@ div#certificate-details {
     margin: 0px;
 }
 
+
+
 /*  ------------------------  */
 
 .flip-card {
@@ -222,8 +224,8 @@ div#certificate-details {
 
 .flip-card-back {
     z-index: 10;
-    background-color: black;
+    background-color: #1A1A1A;
     color: white;
     transform: rotateY(180deg);
-
 }
+

@@ -204,6 +204,8 @@ controllers.getJobDescription =  function (context) {
 
         infoService.getJobDescription(jobID)
             .then((res) => {
+                context.res = res;
+                console.log(res);
                 context.vid = res.vid;
                 context.years = res.years;
                 context.title = res.title;
@@ -265,4 +267,30 @@ controllers.getPortfolio = function (context) {
             this.partial('./views/common/permissions.hbs')
         }).catch(err => console.log(err))
     }
+};
+
+controllers.getAbout = function (context) {
+
+    context.isAuth = userService.isAuth();
+    context.username = sessionStorage.getItem('username');
+
+    if (userService.isAuth()) {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs',
+        }).then(function () {
+            this.partial('./views/array/about/about.hbs')
+        });
+
+    } else {
+
+        context.loadPartials({
+            header: './views/common/header.hbs',
+            footer: './views/common/footer.hbs'
+        }).then(function () {
+            this.partial('./views/common/permissions.hbs')
+        }).catch(err => console.log(err))
+    }
+
 };

@@ -28,6 +28,9 @@ $(() => {
         this.get('#/details/:id', controllers.getCertificateDetails);
         this.get('#/ltu', controllers.getLtu);
 
+        // about rout
+        this.get('#/about', controllers.getAbout);
+
         // portfolio rout
         this.get('#/portfolio', controllers.getPortfolio);
 

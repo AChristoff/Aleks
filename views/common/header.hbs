@@ -3,7 +3,7 @@
         <div class="container">
             <div id="first-col-left" class="col-8">
                 <ul class="navbar-nav mr-auto">
-                    <li>
+                    <li style="width: 112px">
                         <a id="aleks" class="navbar-brand" href="#">
                             <span class="let">let </span>
                             ALEKS
@@ -19,6 +19,8 @@
                         <li><a class="nav-no-link">[</a></li>
                         <li><a class="nav-link" href="#/home">Home</a></li>
                         {{#if isAuth}}
+                            <li><a class="nav-no-link">,</a></li>
+                            <li><a class="nav-link" href="#/about">about</a></li>
                             <li><a class="nav-no-link">,</a></li>
                             <li><a class="nav-link" href="#/portfolio">Portfolio</a></li>
                             <li><a class="nav-no-link">,</a></li>

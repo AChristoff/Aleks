@@ -75,4 +75,19 @@ let goTop = function topFunction() {
     document.documentElement.scrollTop = 0;
 };
 
+function barAnimation () {
+    let skills = $('.skills');
+    let bar = $('.progress-bar-striped');
+
+    skills.on('mouseover', () => {
+        bar.attr('class', 'progress-bar progress-bar-striped progress-bar-animated')
+    });
+
+    skills.on('mouseout', () => {
+        bar.attr('class', 'progress-bar progress-bar-striped')
+    });
+}
+
+
+
 
