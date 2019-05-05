@@ -3,11 +3,11 @@
         <div class="flip-card-front">
             <img src="{{cover}}" alt="Avatar" style="width:320px;height:230px;">
         </div>
-        <div class="flip-card-back" onclick="window.open('{{link}}')">
+        <div class="flip-card-back">
             <h4 style="margin-top: 20px; color: white;">{{repo}}</h4>
-            <p style="height: 90px; padding: 20px; vertical-align: baseline;">{{description}}</p>
+            <p style="height: 85px; padding: 20px; vertical-align: baseline;">{{description}}</p>
             <br>
-            <img src="./images/open-white.png" style="width:30px;">
+            <button id="view" type="button" class="btn btn-outline-primary btn-sm" onclick="window.open('{{link}}')">View project</button>
         </div>
     </div>
 </div>

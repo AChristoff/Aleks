@@ -1,5 +1,4 @@
 
-
 #notifications {
     position: fixed;
 
@@ -12,28 +11,31 @@
     text-align: right;
 }
 
-.notification>span {
+.notification > span {
     position: fixed;
-    top: 90px;
+    top: 52px;
     text-align: center;
     width: 100%;
-    padding:  0.5em 1em 0.5em 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: inline-block;
 }
 
-#loadingBox>span {
+#loadingBox > span {
     font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     border: solid #E5E5E5 1px;
     background: white;
     color: #1A1A1A;
 }
-#infoBox>span {
+
+#infoBox > span {
     font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     border: solid #E5E5E5 1px;
     background: white;
     color: #41cc6e;
 }
-#errorBox>span {
+
+#errorBox > span {
     font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     border: solid #E5E5E5 1px;
     background: white;
