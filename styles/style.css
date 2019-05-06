@@ -17,7 +17,14 @@ footer {
 }
 
 div#root {
+    position: absolute;
+    top: 0;
+    width: 100%;
     min-height: 100%;
+}
+
+div.container {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .align-right {
@@ -200,7 +207,6 @@ div#certificate-details {
 }
 
 
-
 /*  ------------------------  */
 
 .flip-card {
@@ -217,7 +223,7 @@ div#certificate-details {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -245,3 +251,19 @@ div#certificate-details {
     transform: rotateY(180deg);
 }
 
+/* MATRIX */
+
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*adding a black bg to the body to make things clearer*/
+body {
+    background: white;
+}
+
+canvas {
+    display: block;
+}
