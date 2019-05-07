@@ -90,13 +90,13 @@ div.container {
 
 
 #view {
-    border: solid white;
+    border: solid white 2px;
     color: white;
 }
 
 
 #view:hover {
-    border: solid white;
+    border: solid white 2px;
     background-color: white;
     color: #1A1A1A;
 }
@@ -265,5 +265,10 @@ body {
 }
 
 canvas {
+    z-index: -1;
     display: block;
+    width:100%;
+    position:fixed !important;
+    top:0;
+    bottom:0;
 }

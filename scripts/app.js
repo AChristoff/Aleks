@@ -36,6 +36,7 @@ $(() => {
 
         //contacts rout
         this.get('#/contacts', controllers.getContacts);
+        this.get('#/message', controllers.getMessage);
 
         //experience rout
         this.get('#/experience', controllers.getExperience);
