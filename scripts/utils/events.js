@@ -55,6 +55,35 @@ function loginValidation() {
     });
 }
 
+function emailValidation() {
+    let sendBtn = $('#sendBtn');
+    let email = $('#inputEmail');
+    let message = $('#inputMessage');
+
+    email.on('keyup', () => {
+        if (email.val() !== '') {
+            email.attr('class', 'form-control');
+        }
+    });
+
+    message.on('keyup', () => {
+        if (message.val() !== '') {
+            message.attr('class', 'form-control');
+        }
+    });
+
+    sendBtn.on('click', () => {
+        if (email.val() === '') {
+            email.attr('class', 'form-control is-invalid');
+            notify.showError('Email is required')
+        } else if (message.val() === '') {
+            message.attr('class', 'form-control is-invalid');
+            notify.showError('Message is required')
+        }
+    });
+}
+
+
 function showJobInfo(job) {
 
     let jobInfoClosed = $(`.${job}-closed`);

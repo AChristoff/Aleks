@@ -44,9 +44,12 @@
                             <li><a class="nav-no-link welcome">{{username}}</a></li>
                             <li><a class="nav-link" href="#/logout">Logout</a></li>
                         {{else}}
-                            <li><a class="nav-no-link">//</a></li>
-                            <li><a class="nav-link" href="#/register">Register</a></li>
-                            <li><a class="nav-link" href="#/login">Login</a></li>
+
+                            <li><a class="nav-link" href="#/login" style="margin-right: 10px">Login</a></li>
+                            <li><a class="nav-no-link" style="margin-right: 2px">//</a></li>
+                            <li><form method="POST" action="#/guest"><button id="guestNav">Be Guest</button></form></li>
+
+
                         {{/if}}
                     </div>
                 </ul>

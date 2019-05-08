@@ -7,28 +7,67 @@
         <div class="col-6">
             <h2 style="margin-bottom: 20px; text-align: center">Contact the source</h2>
             <br>
-            <form method="POST" action="">
-
-                <div class="form-group">
-                    <label for="inputName">Name *</label>
-                    <input type="text" name="name" class="form-control" id="inputNam">
-                </div>
+            <form id="jquery_form">
 
                 <div class="form-group">
                     <label for="inputEmail">Email *</label>
-                    <input type="email" name="email" class="form-control" id="inputEmail">
+                    <input type="text" name="subject" class="form-control" id="inputEmail">
                 </div>
 
                 <div class="form-group">
                     <label for="inputMessage">Message *</label>
-                    <textarea name="message" class="form-control" id="inputMessage" rows="7"></textarea>
+                    <textarea name="text" class="form-control" id="inputMessage" rows="7"></textarea>
                 </div>
-                <div style="margin-top: 35px" class="g-recaptcha" data-sitekey="6Lc6MqIUAAAAAPMkwoDPvX1s_3JTXoYnbMWUDFS0"></div>
+                <!--<div style="margin-top: 35px" class="g-recaptcha" data-sitekey="6Lc6MqIUAAAAAPMkwoDPvX1s_3JTXoYnbMWUDFS0"></div>-->
                 <div style="text-align: center; margin: 35px">
-                    <button name="submit" type="submit" class="btn btn-outline-primary">Submit</button>
+                    <button id="sendBtn" name="send" type="submit" class="btn btn-outline-primary">Send message</button>
                 </div>
 
             </form>
+            <script>emailValidation()</script>
+
+            <script>
+                //update this with your $form selector
+                let form_id = "jquery_form";
+
+                let data = {
+                    "access_token": "3411qt7urq6e5wr7h69w3r1l"
+                };
+
+                function onSuccess() {
+                    // remove this to avoid redirect
+                    window.location = window.location.pathname + "#/contacts";
+                    notify.showSuccess('The message was send successfully!')
+                }
+
+                function onError(error) {
+                    return;
+                }
+
+                let sendButton = $("#" + form_id + " [name='send']");
+
+                function send() {
+
+                    let subject = $("#" + form_id + " [name='subject']").val();
+                    let message = $("#" + form_id + " [name='text']").val();
+                    data['subject'] = subject;
+                    data['text'] = message;
+
+                    $.post('https://postmail.invotes.com/send',
+                            data,
+                            onSuccess
+                    ).fail(onError);
+
+                    return false;
+                }
+
+                sendButton.on('click', send);
+
+                let $form = $("#" + form_id);
+                $form.submit(function( event ) {
+                    event.preventDefault();
+                });
+            </script>
 
         </div>
 

@@ -101,6 +101,52 @@ div.container {
     color: #1A1A1A;
 }
 
+#guestBtn {
+    background: none !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #1A1A1A;
+    border: none;
+    cursor: pointer;
+    outline:none;
+}
+
+#guestBtn:hover {
+    background: none !important;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    color: #1A1A1A;
+    border: none;
+    cursor: pointer;
+    outline:none;
+}
+
+#guestNav {
+    background: none !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.4);
+    border: none;
+    cursor: pointer;
+    outline:none;
+}
+
+#guestNav:hover {
+    background: none !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #1A1A1A;
+    border: none;
+    cursor: pointer;
+    outline:none;
+}
+
 
 /* ------------------------------------ */
 
@@ -147,9 +193,10 @@ div#certificate-details {
 }
 
 .enlarge:hover {
-    -webkit-transform: scale(1.5); /* or some other value */
-    transform: scale(1.5);
-    box-shadow: 0 0 2px 1px rgba(183, 183, 183, 0.5);
+    cursor: pointer;
+    -webkit-transform: scale(1.1); /* or some other value */
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 2px rgba(183, 183, 183, 0.5);
 }
 
 .verify {
@@ -190,6 +237,18 @@ div#certificate-details {
 }
 
 .showInfo:hover {
+    cursor: pointer;
+}
+
+
+.moreInfo {
+    margin-bottom: 5px;
+    width: 35px;
+    color:#1A1A1A;
+}
+
+.moreInfo:hover {
+    color:#919AA1;
     cursor: pointer;
 }
 
@@ -267,8 +326,8 @@ body {
 canvas {
     z-index: -1;
     display: block;
-    width:100%;
-    position:fixed !important;
-    top:0;
-    bottom:0;
+    width: 100%;
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
 }

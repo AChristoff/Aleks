@@ -52,7 +52,7 @@ controllers.getLogin = function (context) {
 };
 
 controllers.postLogin = function (context) {
-    console.log('click');
+
     let username = context.params.username;
     let password = context.params.password;
     userService
@@ -77,6 +77,26 @@ controllers.postLogin = function (context) {
         notify.handleError(err);
     });
 };
+
+
+controllers.postGuest = function (context) {
+
+    let username = 'guest';
+    let password = 'guest';
+    userService
+        .login(username, password)
+        .then((res) => {
+            userService.saveSession(res);
+            context.redirect('#/home');
+            notify.showSuccess('Welcome Guest! Enjoy my website!');
+        }).catch((err) => {
+
+        notify.handleError(err);
+    });
+};
+
+
+
 
 // LOGOUT
 

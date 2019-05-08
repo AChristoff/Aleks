@@ -19,6 +19,9 @@ $(() => {
         this.get('#/login', controllers.getLogin);
         this.post('#/login', controllers.postLogin);
 
+        // guest rout
+        this.post('#/guest', controllers.postGuest);
+
         // logout rout
         this.get('#/logout', controllers.getLogout);
 
