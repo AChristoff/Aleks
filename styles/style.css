@@ -109,7 +109,7 @@ div.container {
     color: #1A1A1A;
     border: none;
     cursor: pointer;
-    outline:none;
+    outline: none;
 }
 
 #guestBtn:hover {
@@ -120,7 +120,7 @@ div.container {
     color: #1A1A1A;
     border: none;
     cursor: pointer;
-    outline:none;
+    outline: none;
 }
 
 #guestNav {
@@ -132,7 +132,7 @@ div.container {
     color: rgba(0, 0, 0, 0.4);
     border: none;
     cursor: pointer;
-    outline:none;
+    outline: none;
 }
 
 #guestNav:hover {
@@ -144,7 +144,7 @@ div.container {
     color: #1A1A1A;
     border: none;
     cursor: pointer;
-    outline:none;
+    outline: none;
 }
 
 
@@ -261,11 +261,11 @@ div#certificate-details {
 .moreInfo {
     margin-bottom: 5px;
     width: 35px;
-    color:#1A1A1A;
+    color: #1A1A1A;
 }
 
 .moreInfo:hover {
-    color:#919AA1;
+    color: #919AA1;
     cursor: pointer;
 }
 
@@ -285,6 +285,12 @@ div#certificate-details {
 .years {
     margin-bottom: 10px;
     font-size: 12px;
+}
+
+#cover {
+    width: 320px;
+    height: 230px;
+    background: white;
 }
 
 
@@ -319,8 +325,12 @@ div#certificate-details {
     backface-visibility: hidden;
 }
 
+.btn:focus {
+    outline: none !important;
+}
+
 .flip-card-front {
-    background-color: #bbb;
+    background-color: white;
     color: black;
     z-index: 2;
 }

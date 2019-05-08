@@ -1,13 +1,17 @@
-<div class="flip-card">
-    <div class="flip-card-inner">
-        <div class="flip-card-front">
-            <img src="{{cover}}" alt="Avatar" style="width:320px;height:230px;">
-        </div>
-        <div class="flip-card-back">
-            <h4 style="margin-top: 20px; color: white;">{{repo}}</h4>
-            <p style="height: 85px; padding: 20px; vertical-align: baseline;">{{description}}</p>
-            <br>
-            <button id="view" type="button" class="btn btn-outline-primary btn-sm" onclick="window.open('{{link}}')">View project</button>
+<div id="project">
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img id="cover" src="{{cover}}" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+                <h4 style="margin-top: 20px; color: white;">{{repo}}</h4>
+                <p style="height: 85px; padding: 20px; vertical-align: baseline;">{{description}}</p>
+                <br>
+                <button id="view" type="button" class="btn btn-outline-primary btn-sm"
+                        onclick="window.open('{{link}}')">View project
+                </button>
+            </div>
         </div>
     </div>
 </div>
