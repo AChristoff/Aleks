@@ -10,6 +10,7 @@ $(() => {
         this.get('#/home', controllers.getHome);
         this.get('#', controllers.getHome);
         this.get('/', controllers.getHome);
+        this.get('', controllers.getHome);
 
         // register routes
         this.get('#/register', controllers.getRegister);
@@ -46,5 +47,5 @@ $(() => {
         this.get('#/job-description/:id', controllers.getJobDescription);
 
     });
-    app.run('#/home');
+    app.run('/');
 });
