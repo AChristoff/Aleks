@@ -7,14 +7,14 @@ let notify = (() => {
     let infoBox = $('#infoBox');
     infoBox.find('span').text(message);
     infoBox.fadeIn();
-    setTimeout(() => infoBox.fadeOut(), 3000)
+    setTimeout(() => infoBox.fadeOut(), 4500)
   }
 
   function showError(message) {
     let errorBox = $('#errorBox');
     errorBox.find('span').text(message);
     errorBox.fadeIn();
-    setTimeout(() => errorBox.fadeOut(), 3000)
+    setTimeout(() => errorBox.fadeOut(), 3500)
   }
 
   function handleError (reason) {

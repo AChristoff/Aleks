@@ -88,7 +88,7 @@ controllers.postGuest = function (context) {
         .then((res) => {
             userService.saveSession(res);
             context.redirect('#/home');
-            notify.showSuccess('Welcome Guest! Enjoy my website!');
+            notify.showSuccess("Welcome, you are granted website's full functionality!");
         }).catch((err) => {
 
         notify.handleError(err);
