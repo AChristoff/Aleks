@@ -46,5 +46,5 @@ $(() => {
         this.get('#/job-description/:id', controllers.getJobDescription);
 
     });
-    app.run('#/home');
+    app.run('#');
 });
