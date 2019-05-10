@@ -69,6 +69,7 @@ div.container {
 .username {
     padding-right: 10px;
 }
+
 .column {
     margin-top: 0.95em;
 }
@@ -250,6 +251,11 @@ div#certificate-details {
     transition: transform .5s;
     transform: translateY(100px)
 }
+
+#navBtn {
+    margin: 0px 0px 0px 0px;
+}
+
 
 .icons {
     background-color: white;

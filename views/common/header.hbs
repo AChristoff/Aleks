@@ -4,30 +4,30 @@
             <div id="first-col-left" class="col-8">
                 <ul class="navbar-nav mr-auto">
                     <li style="width: 112px">
-                        <a id="aleks" class="navbar-brand" href="#">
+                        <span id="aleks" class="navbar-brand" href="#">
                             <span class="let">let </span>
                             ALEKS
                             <span class="distance">=</span>
-                        </a>
-                        <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse"
-                                data-target="#navbarColor03"
-                                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                            <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarColor03"
+                                    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                        </span>
                     </li>
                     <div class="collapse navbar-collapse nav-buttons" id="navbarColor03">
                         <li><a class="nav-no-link">[</a></li>
                         <li><a class="nav-link" href="#/home">Home</a></li>
                         {{#if isAuth}}
-                            <li><a class="nav-no-link">,</a></li>
+                            <span class="nav-no-link">,</span>
                             <li><a class="nav-link" href="#/about">about</a></li>
-                            <li><a class="nav-no-link">,</a></li>
+                            <span class="nav-no-link">,</span>
                             <li><a class="nav-link" href="#/portfolio">Portfolio</a></li>
-                            <li><a class="nav-no-link">,</a></li>
+                            <span class="nav-no-link">,</span>
                             <li><a class="nav-link" href="#/experience">Experience</a></li>
-                            <li><a class="nav-no-link">,</a></li>
+                            <span class="nav-no-link">,</span>
                             <li><a class="nav-link" href="#/education">Education</a></li>
-                            <li><a class="nav-no-link">,</a></li>
+                            <span class="nav-no-link">,</span>
                             <li><a class="nav-link" href="#/contacts">Contacts</a></li>
                             <li><a class="nav-no-link space">];</a></li>
                         {{else}}
@@ -44,12 +44,8 @@
                             <li><a class="nav-no-link username">{{username}}</a></li>
                             <li><a class="nav-link" href="#/logout">// Logout</a></li>
                         {{else}}
-
                             <li><a class="nav-link" href="#/login" style="margin-right: 10px">Login</a></li>
-                            <li><a class="nav-no-link" style="margin-right: 2px">//</a></li>
-                            <li><form method="POST" action="#/guest"><button id="guestNav">Be Guest</button></form></li>
-
-
+                            <li><form method="POST" action="#/guest"><button id="guestNav">//Be Guest</button></form></li>
                         {{/if}}
                     </div>
                 </ul>
