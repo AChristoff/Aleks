@@ -1,7 +1,15 @@
 let notify = (() => {
+
   $(document).on({
-    ajaxStart: () => $('#loadingBox').show(),
-    ajaxStop: () => $('#loadingBox').fadeOut()
+
+    ajaxStart: () => {
+      $('#loadingBox span').text('Loading...');
+      $('#loadingBox').show()
+    },
+    ajaxStop: () => {
+      $('#loadingBox span').text('Loading...');
+      $('#loadingBox').fadeOut()
+    }
   });
   function showSuccess (message) {
     let infoBox = $('#infoBox');
