@@ -173,7 +173,7 @@ function m3x() {
 
 function loadingPage() {
     $(document).ready(function () {
-        $("#root").fadeIn(5000);
+        $("#root").fadeIn(4000);
         setTimeout(function(){ $("#notifications").fadeIn(1000); }, 5000);
     });
 
