@@ -88,7 +88,7 @@ controllers.postGuest = function (context) {
         .then((res) => {
             userService.saveSession(res);
             context.redirect('#/home');
-            notify.showSuccess("Welcome, you are granted website's full functionality!");
+            notify.showSuccess("You are now granted website's full functionality!");
         }).catch((err) => {
 
         notify.handleError(err);
@@ -106,6 +106,6 @@ controllers.getLogout = function (context) {
         .then(() => {
             sessionStorage.clear();
             context.redirect('#/home');
-            notify.showSuccess('Logout successful. Thank you for visiting my website!');
+            notify.showSuccess('Logout is successful, thank you for visiting my website!');
         }).catch((err) => console.log(err));
 };

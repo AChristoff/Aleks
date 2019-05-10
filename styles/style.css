@@ -63,9 +63,12 @@ div.container {
 }
 
 .welcome {
-    padding-right: 8px;
+    padding-right: 4px;
 }
 
+.username {
+    padding-right: 10px;
+}
 .column {
     margin-top: 0.95em;
 }
@@ -133,6 +136,7 @@ div.container {
     border: none;
     cursor: pointer;
     outline: none;
+    padding-right: 8px;
 }
 
 #guestNav:hover {
@@ -145,6 +149,7 @@ div.container {
     border: none;
     cursor: pointer;
     outline: none;
+    padding-right: 8px;
 }
 
 
