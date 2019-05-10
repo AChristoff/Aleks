@@ -22,6 +22,7 @@ const userService = (() => {
         return kinvey.post('user', '_logout', 'kinvey');
     }
 
+
     return {
         saveSession,
         register,

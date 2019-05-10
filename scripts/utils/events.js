@@ -159,7 +159,7 @@ function m3x() {
 
             //sending the drop back to the top randomly after it has crossed the screen
             //adding a randomness to the reset to make the drops scattered on the Y axis
-            if(c.height && Math.random() > 0.975)
+            if(c.height && Math.random() > 0.925)
                 drops[i] = 0;
 
             //incrementing Y coordinate
@@ -167,7 +167,16 @@ function m3x() {
         }
     }
 
-    return setInterval(draw, 99);
+    return setInterval(draw, 80);
+}
+
+
+function loadingPage() {
+    $(document).ready(function () {
+        $("#root").fadeIn(5000);
+        setTimeout(function(){ $("#notifications").fadeIn(1000); }, 5000);
+    });
+
 }
 
 
