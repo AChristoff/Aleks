@@ -252,6 +252,12 @@ div#certificate-details {
     transform: translateY(100px)
 }
 
+.tech {
+    width: 70px;
+    margin: 15px;
+}
+
+
 #navBtn {
     margin: 0px 0px 0px 0px;
 }
