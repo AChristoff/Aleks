@@ -142,6 +142,7 @@ controllers.getContacts = function (context) {
             footer: './views/common/footer.hbs',
         }).then(function () {
             this.partial('./views/array/contacts/contacts.hbs')
+            getWeather();
         });
 
     } else {
@@ -153,6 +154,8 @@ controllers.getContacts = function (context) {
             this.partial('./views/common/permissions.hbs')
         }).catch(err => console.log(err))
     }
+
+
 };
 
 

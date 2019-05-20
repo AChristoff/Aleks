@@ -180,6 +180,43 @@ function loadingPage() {
 }
 
 
+function getWeather() {
+
+    let api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+    let location = 'Sofia,Bulgaria';
+    let units = '&units=metric';
+    let apiKey = '&APPID=a22b522511b96109ac3c718b5d0675b6';
+
+    (async function get() {
+
+        try {
+
+            let result = await $.ajax({
+                url: api + location + units + apiKey,
+                method: 'GET'
+            });
+            console.log(result);
+
+            let description = result.weather[0].main;
+            let temp = result.main.temp;
+            temp =  temp.toFixed(0) + " °C";
+            let icon = result.weather[0].icon;
+
+
+            let t = $('#temp');
+            t.text(`${temp}`);
+            let img = $('#img');
+            img.attr('src', `http://openweathermap.org/img/w/${icon}.png`);
+            let des = $('#description');
+            des.text(`${description}`)
+
+        } catch (err) {
+            console.log(err);
+        }
+    })();
+}
+
+
 
 
 
