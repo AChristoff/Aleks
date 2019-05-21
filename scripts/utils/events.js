@@ -182,31 +182,37 @@ function loadingPage() {
 
 async function getWeather() {
 
-    let api = 'http://api.openweathermap.org/data/2.5/weather?q=';
-    let location = 'Sofia,Bulgaria';
-    let units = '&units=metric';
-    let apiKey = '&APPID=a22b522511b96109ac3c718b5d0675b6';
+    let baseUrl = 'http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/';
+    let location = '51097';
+    let apiKey = '?apikey=rCkwX8hea9lbhN4EKi7kf9HXiu0SWTWZ';
+    let details = '&details=true';
+    let units = '&metric=true';
 
     try {
 
         let result = await $.ajax({
-            url: api + location + units + apiKey,
+            url: baseUrl + location + apiKey + details + units,
             method: 'GET'
         });
 
-        let description = result.weather[0].description;
-        description = description[0].toUpperCase() + description.slice(1).toLowerCase();
 
-        let temp = result.main.temp;
-        temp = temp.toFixed(0) + " °C";
-        let icon = result.weather[0].icon;
+        let description = result[0].IconPhrase;
+
+        let temp = result[0].Temperature.Value;
+        temp = temp + " °C";
+
+        let icon = result[0].WeatherIcon;
+        console.log(typeof icon);
+        if (icon < 10) {
+            icon = icon.toString().padStart(2, '0')
+        }
 
         $('#temp').text(`${temp}`);
-        $('#img').attr('src', `http://openweathermap.org/img/w/${icon}.png`);
+        $('#img').attr('src', `https://developer.accuweather.com/sites/default/files/${icon}-s.png`);
         $('#description').text(`${description}`)
 
     } catch (err) {
-        console.log('OpenWeatherMap Error');
+        console.log('weather error');
     }
 }
 
