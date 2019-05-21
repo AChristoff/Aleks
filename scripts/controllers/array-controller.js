@@ -132,8 +132,6 @@ controllers.getLtu = function (context) {
 
 controllers.getContacts = function (context) {
 
-    getWeather();
-
     context.isAuth = userService.isAuth();
     context.username = sessionStorage.getItem('username');
 
@@ -184,7 +182,7 @@ controllers.getMessage = function (context) {
 };
 
 
-controllers.getExperience =  function (context) {
+controllers.getExperience = function (context) {
 
     context.isAuth = userService.isAuth();
     context.username = sessionStorage.getItem('username');
@@ -217,8 +215,7 @@ controllers.getExperience =  function (context) {
 };
 
 
-
-controllers.getJobDescription =  function (context) {
+controllers.getJobDescription = function (context) {
 
     context.isAuth = userService.isAuth();
     context.username = sessionStorage.getItem('username');
@@ -226,7 +223,7 @@ controllers.getJobDescription =  function (context) {
 
     infoService.getJobs()
         .then((res) => {
-          context.jobs = res;
+            context.jobs = res;
         });
 
     if (userService.isAuth()) {

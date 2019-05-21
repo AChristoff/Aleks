@@ -201,7 +201,6 @@ async function getWeather() {
         temp = temp.toFixed(0) + " °C";
         let icon = result.weather[0].icon;
 
-
         $('#temp').text(`${temp}`);
         $('#img').attr('src', `http://openweathermap.org/img/w/${icon}.png`);
         $('#description').text(`${description}`)
