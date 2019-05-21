@@ -104,7 +104,7 @@ let goTop = function topFunction() {
     document.documentElement.scrollTop = 0;
 };
 
-function barAnimation () {
+function barAnimation() {
     let skills = $('.skills');
     let bar = $('.progress-bar-striped');
 
@@ -131,17 +131,16 @@ function m3x() {
     binary = binary.split("");
 
     let font_size = 12;
-    let columns = c.width/font_size; //number of columns for the rain
+    let columns = c.width / font_size; //number of columns for the rain
 //an array of drops - one per column
     let drops = [];
 //x below is the x coordinate
 //1 = y co-ordinate of the drop(same for every drop initially)
-    for(let x = 0; x < columns; x++)
+    for (let x = 0; x < columns; x++)
         drops[x] = 0;
 
 //drawing the characters
-    function draw()
-    {
+    function draw() {
         //Black BG for the canvas
         //translucent BG to show trail
         ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
@@ -150,16 +149,15 @@ function m3x() {
         ctx.fillStyle = "#dbe2e7"; //green text
         ctx.font = font_size + "px arial";
         //looping over drops
-        for(let i = 0; i < drops.length; i++)
-        {
+        for (let i = 0; i < drops.length; i++) {
             //a random chinese character to print
-            let text = binary[Math.floor(Math.random()*binary.length)];
+            let text = binary[Math.floor(Math.random() * binary.length)];
             //x = i*font_size, y = value of drops[i]*font_size
-            ctx.fillText(text, i*font_size, drops[i]*font_size);
+            ctx.fillText(text, i * font_size, drops[i] * font_size);
 
             //sending the drop back to the top randomly after it has crossed the screen
             //adding a randomness to the reset to make the drops scattered on the Y axis
-            if(c.height && Math.random() > 0.925)
+            if (c.height && Math.random() > 0.925)
                 drops[i] = 0;
 
             //incrementing Y coordinate
@@ -174,46 +172,43 @@ function m3x() {
 function loadingPage() {
     $(document).ready(function () {
         $("#root").fadeIn(4000);
-        setTimeout(function(){ $("#notifications").fadeIn(1000); }, 5000);
+        setTimeout(function () {
+            $("#notifications").fadeIn(1000);
+        }, 5000);
     });
 
 }
 
 
-function getWeather() {
+async function getWeather() {
 
     let api = 'http://api.openweathermap.org/data/2.5/weather?q=';
     let location = 'Sofia,Bulgaria';
     let units = '&units=metric';
     let apiKey = '&APPID=a22b522511b96109ac3c718b5d0675b6';
 
-    (async function get() {
+    try {
 
-        try {
+        let result = await $.ajax({
+            url: api + location + units + apiKey,
+            method: 'GET'
+        });
 
-            let result = await $.ajax({
-                url: api + location + units + apiKey,
-                method: 'GET'
-            });
-            console.log(result);
+        let description = result.weather[0].description;
+        description = description[0].toUpperCase() + description.slice(1).toLowerCase();
 
-            let description = result.weather[0].main;
-            let temp = result.main.temp;
-            temp =  temp.toFixed(0) + " °C";
-            let icon = result.weather[0].icon;
+        let temp = result.main.temp;
+        temp = temp.toFixed(0) + " °C";
+        let icon = result.weather[0].icon;
 
 
-            let t = $('#temp');
-            t.text(`${temp}`);
-            let img = $('#img');
-            img.attr('src', `http://openweathermap.org/img/w/${icon}.png`);
-            let des = $('#description');
-            des.text(`${description}`)
+        $('#temp').text(`${temp}`);
+        $('#img').attr('src', `http://openweathermap.org/img/w/${icon}.png`);
+        $('#description').text(`${description}`)
 
-        } catch (err) {
-            console.log(err);
-        }
-    })();
+    } catch (err) {
+        console.log('OpenWeatherMap Error');
+    }
 }
 
 
