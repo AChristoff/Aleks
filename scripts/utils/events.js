@@ -216,34 +216,17 @@ async function getWeather() {
     }
 }
 
-function onHover() {
+let sourceSwap = function () {
+    let greyImg = $(this).attr('src');
+    let colorImg = $(this).data('alt-src');
 
-    let imgId = {
-        '5cc71473d5516a2f65a26fb5': 'Wall-log.png',
-        '5ccaa2ea3c01513bbf3e994f': 'dhl-log.png',
-        '5ccaa35621125a1911b5314c': 'ikea-log.png',
-        '5ccaad060390743bc43e6f98': 'sug-log.png',
-        '5ccabd793c01513bbf3fbe4a': 'Softuni.png',
-        '5ccabd8f0575c06b12160d86': 'ForestUni.png',
-    };
+    $(this).data('alt-src', greyImg);
+    $(this).attr('src', colorImg);
+};
 
-    window.onmouseover = function (e) {
-        let target = e.target;
-
-        if (imgId.hasOwnProperty(target.id)) {
-
-            $(target).attr("src", `./images/color-${imgId[target.id]}`);
-        }
-    };
-
-    window.onmouseout = function (e) {
-        let target = e.target;
-
-        if (imgId.hasOwnProperty(target.id)) {
-            $(target).attr("src", `./images/${imgId[target.id]}`);
-        }
-    };
-}
+let changeImg = function() {
+    $('img.enlarge-B').hover(sourceSwap, sourceSwap);
+};
 
 
 

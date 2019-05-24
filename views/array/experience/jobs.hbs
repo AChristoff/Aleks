@@ -1,8 +1,8 @@
 <div class="row">
-    <div class="col-4"></div>
-    <div class="col-4" style="margin-bottom: 10px">
-        <p class="years">{{date}}</p>
-        <img id="{{_id}}" class="enlarge-B" src="{{logo}}" onclick="window.location.href='#/job-description/{{_id}}'">
-    </div>
-    <div class="col-4"></div>
+   <div class="col-4"></div>
+   <div class="col-4" style="margin-bottom: 10px">
+      <p class="years">{{date}}</p>
+      <img class="enlarge-B" src="{{logo.[0]}}" data-alt-src="{{logo.[1]}}" onclick="window.location.href='#/job-description/{{_id}}'">
+   </div>
+   <div class="col-4"></div>
 </div>
