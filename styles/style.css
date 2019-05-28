@@ -1,3 +1,6 @@
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Play|Zilla+Slab+Highlight&display=swap");
+
 body {
     background-color: #ccc;
 }
@@ -31,8 +34,32 @@ div.container {
     float: right;
 }
 
-#aleks {
-    padding-top: 7px;
+li span a#aleks {
+    text-transform: none !important;
+    font-family: 'Play', sans-serif !important;
+    width: 200px;
+    font-size: 22px !important;
+    color: black !important;
+    text-decoration: none !important;
+}
+
+
+li span.navbar-brand {
+    margin: 0px 20px;
+}
+
+.footer-icons {
+    margin: 5px;
+    font-weight: normal !important;
+    text-decoration: none !important;
+    font-size: 21px !important;
+    color: #979EA3 !important;
+}
+
+.footer-icons:hover {
+    font-weight: normal !important;
+    text-decoration: none !important;
+    color: black !important;
 }
 
 .array {
@@ -128,12 +155,13 @@ div.container {
 }
 
 #guestNav {
+    font-weight: bold;
     background: none !important;
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
-    color: rgba(0, 0, 0, 0.4);
+    color: #919AA1 !important;;
     border: none;
     cursor: pointer;
     outline: none;
@@ -146,7 +174,7 @@ div.container {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
-    color: #1A1A1A;
+    color: #1A1A1A !important;
     border: none;
     cursor: pointer;
     outline: none;
@@ -231,6 +259,19 @@ div#certificate-details {
     margin-bottom: 20px;
 }
 
+#nav li a {
+    color: #919AA1 !important;
+    font-weight: bold !important;
+}
+
+#nav {
+    color: black !important;
+}
+
+#nav li a:hover {
+    color: black !important;
+}
+
 #nav {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -238,6 +279,13 @@ div#certificate-details {
     padding-right: 0px;
     border-left: none;
     border-right: none;
+}
+
+.arr {
+    font-size: 13px !important;
+    padding: 0 !important;
+    margin-bottom: 3px !important;
+    color: black !important;
 }
 
 .fixed-nav {
@@ -308,6 +356,11 @@ div#certificate-details {
     width: 320px;
     height: 230px;
     background: white;
+}
+
+.contacts {
+    font-size: 52px;
+    color: #1A1A1A;
 }
 
 

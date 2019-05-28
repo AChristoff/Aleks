@@ -1,57 +1,55 @@
 <div id="top">
-    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div id="first-col-left" class="col-8">
-                <ul class="navbar-nav mr-auto">
-                    <li style="width: 112px">
-                        <span id="aleks" class="navbar-brand" href="#">
-                            <span class="let">let </span>
-                            ALEKS
-                            <span class="distance">=</span>
+   <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+         <div id="first-col-left" class="col-8">
+            <ul class="navbar-nav mr-auto">
+               <li>
+                        <span class="navbar-brand">
+                           <a id="aleks" href="#">
+                              {aleks}
+                           </a>
                             <button id="navBtn" class="navbar-toggler" type="button" data-toggle="collapse"
                                     data-target="#navbarColor03"
                                     aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         </span>
-                    </li>
-                    <div class="collapse navbar-collapse nav-buttons" id="navbarColor03">
-                        <li><a class="nav-no-link">[</a></li>
-                        <li><a class="nav-link" href="#/home">Home</a></li>
-                        {{#if isAuth}}
-                            <span class="nav-no-link">,</span>
-                            <li><a class="nav-link" href="#/about">about</a></li>
-                            <span class="nav-no-link">,</span>
-                            <li><a class="nav-link" href="#/portfolio">Portfolio</a></li>
-                            <span class="nav-no-link">,</span>
-                            <li><a class="nav-link" href="#/experience">Experience</a></li>
-                            <span class="nav-no-link">,</span>
-                            <li><a class="nav-link" href="#/education">Education</a></li>
-                            <span class="nav-no-link">,</span>
-                            <li><a class="nav-link" href="#/contacts">Contacts</a></li>
-                            <li><a class="nav-no-link space">];</a></li>
-                        {{else}}
-                            <li><a class="nav-no-link space">];</a></li>
-                        {{/if}}
-                    </div>
-                </ul>
-            </div>
-            <div id="first-col-right" class="col-4">
-                <ul class="navbar-nav mr-auto align-right">
-                    <div class="collapse navbar-collapse nav-buttons" id="navbarColor03">
-                        {{#if isAuth}}
-                            <li><a class="nav-no-link welcome let">Welcome,</a></li>
-                            <li><a class="nav-no-link username">{{username}}</a></li>
-                            <li><a class="nav-link" href="#/logout">// Logout</a></li>
-                        {{else}}
-                            <li><a class="nav-link" href="#/login" style="margin-right: 10px">Login</a></li>
-                            <li><form method="POST" action="#/guest"><button id="guestNav">// Guest</button></form></li>
-                        {{/if}}
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </nav>
+               </li>
+               <div class="collapse navbar-collapse nav-buttons" id="navbarColor03">
+                  <li><a class="nav-link" href="#/home">Home</a></li>
+                  {{#if isAuth}}
+                     <li><a class="nav-link" href="#/about">About</a></li>
+                     <li><a class="nav-link" href="#/portfolio">Portfolio</a></li>
+                     <li><a class="nav-link" href="#/experience">Experience</a></li>
+                     <li><a class="nav-link" href="#/education">Education</a></li>
+                     <li><a class="nav-link" href="#/contacts">Contacts</a></li>
+
+                  {{else}}
+
+                  {{/if}}
+               </div>
+            </ul>
+         </div>
+         <div id="first-col-right" class="col-4">
+            <ul class="navbar-nav mr-auto align-right">
+               <div class="collapse navbar-collapse nav-buttons" id="navbarColor03">
+                  {{#if isAuth}}
+                     <li><span class="nav-no-link welcome let">Welcome,</span></li>
+                     <li><span class="nav-no-link username">{{username}}</span></li>
+                     <li><a class="nav-link" href="#/logout">Logout</a></li>
+                  {{else}}
+                     <li>
+                        <form method="POST" action="#/guest">
+                           <button id="guestNav">Guest</button>
+                        </form>
+                     </li>
+                     <li><a class="nav-link" href="#/login" style="margin-right: 10px">Login</a></li>
+                  {{/if}}
+               </div>
+            </ul>
+         </div>
+      </div>
+   </nav>
 </div>
 
 <script>fixNavigation()</script>
