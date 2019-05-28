@@ -43,9 +43,30 @@ li span a#aleks {
     text-decoration: none !important;
 }
 
+#download {
+    outline: none;
+    border: 2px solid #1b1e21;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    background-color: #1b1e21;
+    font-size: 11px;
+    padding: 10px 10px 8px 10px;
+}
+
+#download:hover {
+    color: #1b1e21;
+    background-color: white;
+}
+
+.fa-arrow-circle-down {
+    font-size: 14px !important;
+    margin-right: 10px !important;
+}
+
+
 
 li span.navbar-brand {
-    margin: 0px 20px;
+    margin: -3px 20px;
 }
 
 .footer-icons {
