@@ -1,3 +1,13 @@
+function protectFromXss(username, password) {
+    let usernameValidator = /[<\/>()=,!?|+*#$%&@]+/g;
+    let passwordValidator = /[<\/>()]+/g;
+    if (!password) {
+        return usernameValidator.test(username);
+    } else if (!username) {
+        return passwordValidator.test(password);
+    }
+}
+
 // REGISTER
 
 controllers.getRegister = function (context) {
@@ -10,16 +20,21 @@ controllers.getRegister = function (context) {
     }).catch((err) => console.log(err));
 };
 
-
 controllers.postRegister = function (context) {
     let username = context.params.username;
     let password = context.params.password;
     let repeatPassword = context.params.repeatPassword;
     $('#registerUsername').attr('class', 'form-control');
 
-    if (username === '') {
+    if (protectFromXss(username,'')) {
+        $('#registerUsername').attr('class', 'form-control is-invalid');
+        return notify.showError('Username contains invalid character < \\ \/ > ( ) = , ; : ! ? + | @ & % $ # *');
+    } else if (username === '') {
         $('#registerUsername').attr('class', 'form-control is-invalid');
         return notify.showError('Username is required!');
+    } else if (protectFromXss('',password)) {
+        $('#registerUsername').attr('class', 'form-control is-invalid');
+        return notify.showError('Password contains invalid character < \\ \/ > ( )');
     } else if (password === '') {
         $('#registerPassword').attr('class', 'form-control is-invalid');
         return notify.showError('Password is required!');
@@ -36,7 +51,7 @@ controllers.postRegister = function (context) {
             context.redirect('#/home');
             notify.showSuccess('Registration is successful. You are now Logged in. Enjoy my website!');
         }).catch((err) => {
-            notify.handleError(err);
+        notify.handleError(err);
     });
 };
 
@@ -66,12 +81,18 @@ controllers.postLogin = function (context) {
         let loginUsername = $('#loginUsername');
         let loginPassword = $('#loginPassword');
 
-        if (loginUsername.val() === '') {
+        if (protectFromXss(loginUsername.val(),'')) {
+            loginUsername.attr('class', 'form-control is-invalid');
+            return notify.showError('Wrong Username! Remove invalid characters < \\ \/ > ( ) = , ; : ! ? + | @ & % $ # * ');
+        } else if (loginUsername.val() === '') {
             loginUsername.attr('class', 'form-control is-invalid');
             return notify.showError('Username is required!');
         } else if (loginPassword.val() === '') {
             loginPassword.attr('class', 'form-control is-invalid');
             return notify.showError('Password is required!');
+        } else if (protectFromXss('',loginPassword.val())) {
+            loginPassword.attr('class', 'form-control is-invalid');
+            return notify.showError('Wrong Password! Remove invalid characters < \\ \/ > ( )');
         }
 
         notify.handleError(err);
@@ -94,8 +115,6 @@ controllers.postGuest = function (context) {
         notify.handleError(err);
     });
 };
-
-
 
 
 // LOGOUT
