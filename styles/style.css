@@ -206,6 +206,13 @@ li span.navbar-brand {
 /* ------------------------------------ */
 
 /*Certificates styles*/
+
+div#projects {
+    margin-bottom: 10em;
+    padding: 0 6em;
+    text-align: center;
+}
+
 div#certificates, div#projects {
     display: flex;
     justify-content: start;
@@ -214,9 +221,8 @@ div#certificates, div#projects {
 }
 
 div#certificate, div#project {
-
     display: block;
-    margin: 1.5em auto;
+    margin: 0 auto 1.68em auto;
     text-align: center;
     width: 30%;
 }
@@ -365,7 +371,7 @@ div#certificate-details {
 }
 
 .dims {
-    width: 320px;
+    width: 288px;
     margin: 0px;
 }
 
@@ -375,8 +381,8 @@ div#certificate-details {
 }
 
 #cover {
-    width: 320px;
-    height: 230px;
+    width: 290px;
+    height: 208px;
     background: white;
 }
 
@@ -390,8 +396,8 @@ div#certificate-details {
 
 .flip-card {
     background-color: transparent;
-    width: 320px;
-    height: 230px;
+    width: 288px;
+    height: 208px;
     perspective: 1000px;
 }
 

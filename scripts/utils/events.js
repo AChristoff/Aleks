@@ -170,7 +170,7 @@ function loadingPage() {
         $("#root").fadeIn(4000);
         setTimeout(function () {
             $("#notifications").fadeIn(1000);
-        }, 5000);
+        }, 4000);
     });
 
 }
