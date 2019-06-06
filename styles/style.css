@@ -214,8 +214,9 @@ div#certificates, div#projects {
 }
 
 div#certificate, div#project {
+
     display: block;
-    margin: 0 auto;
+    margin: 1.5em auto;
     text-align: center;
     width: 30%;
 }
