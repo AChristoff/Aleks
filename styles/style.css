@@ -227,6 +227,61 @@ div#certificate, div#project {
     width: 30%;
 }
 
+p.showInfo {
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    color: #b7b7b7;
+    padding: 2px;
+    margin: 0.65em 0;
+}
+
+p.job-btn {
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    display: inline-block;
+    font-size: 15px !important;
+    border: 1px solid;
+    color: #1b1e21;
+}
+
+p.job-btn:hover {
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    display: inline-block;
+    font-size: 15px !important;
+    border: 1px dashed;
+}
+
+div.pm-open, div.head-open, div.eng-open {
+    padding: 1.15em 0 0 2em;
+}
+
+div.pm-open p, div.head-open p, div.eng-open p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+div.pm-open ul, div.head-open ul, div.eng-open ul {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+
+ul {
+    padding-left: 17px;
+}
+
+div.head-open ul li:nth-child(n + 18) {
+    list-style: none;
+    font-style: italic;
+}
+
+.fa-undo-alt {
+    margin: 2em auto;
+    font-size: 1.5em;
+}
+
+
 .cert {
     width: 250px;
 }
