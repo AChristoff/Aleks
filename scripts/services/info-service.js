@@ -5,7 +5,7 @@ const infoService = (() => {
     }
 
     function getJobs() {
-        return kinvey.get('appdata', `jobDescription?query={}&sort={"date": -1}`, 'kinvey')
+        return kinvey.get('appdata', `jobDescription?query={}&sort={"from": -1}`, 'kinvey')
     }
 
     function getCertificate(certificateID) {
