@@ -1,8 +1,11 @@
-<script>goTop()</script>
+<script>
+    goTop();
+    document.getElementById('footer-data').innerHTML = `© 2019-${new Date().getFullYear()} Aleksov`;
+</script>
 <footer id="footer" class="footer" style="padding: 0px">
    <div class="row" style="margin: 0px">
       <div class="col-3"></div>
-      <div class="col-3" style="text-align: right; margin-top: 11px; padding-right: 10px">© 2019 Aleks</div>
+      <div id="footer-data" class="col-3" style="text-align: right; margin-top: 11px; padding-right: 10px"></div>
       <div class="col-3" style="text-align: left; padding: 0px; margin-top: 2px">
 
          <a href="https://www.linkedin.com/in/aleksandar-hristov-812340122/" target="_blank">
