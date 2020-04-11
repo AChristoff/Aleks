@@ -428,7 +428,8 @@ div#certificate-details {
     font-size: 12px;
 }
 
-.job-title {
+.job-title,
+.field-of-study {
     margin: 10px 0 0;
 }
 
