@@ -1,13 +1,29 @@
 {{> header}}
 <div class="container array">
     <div class="row">
-        <div class="col text-center">
+        <div class="col-12 text-center">
             <h2>Education</h2>
             <br>
             <br>
-            {{# each educations}}
-                {{> education}}
-            {{/each}}
+
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6" style="margin-bottom: 10px">
+                    <p class="years">2018 - 2019</p>
+                    <img class="enlarge-B" src="./images/Softuni.png" data-alt-src="./images/color-Softuni.png" onclick="window.location.href='#/{{education}}'">
+                </div>
+                <div class="col-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6" style="margin-bottom: 10px">
+                    <p class="years">2006 - 2010</p>
+                    <img class="enlarge-B" src="./images/ForestUni.png" data-alt-src="./images/color-ForestUni.png" onclick="window.location.href='#/{{education}}'">
+                </div>
+                <div class="col-3"></div>
+            </div>
+
         </div>
 
     </div>

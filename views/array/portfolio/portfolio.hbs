@@ -1,14 +1,46 @@
 {{> header}}
 <div class="container array">
     <div class="row">
-        <div class="col text-center">
+        <div class="col-12 text-center">
             <h2>Portfolio</h2>
             <br>
             <br>
-            <div id="projects" class="col text-center">
-                {{# each projects}}
-                    {{> project}}
-                {{/each}}
+            <div class="row text-center">
+
+                <div class="col-6 projects">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img id="cover" src="./images/casita-logo.png" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="margin-top: 20px; color: white;">Business Website</h4>
+                                <p style="height: 85px; padding: 20px; vertical-align: baseline;">Vue.js & Sass</p>
+                                <button id="view" type="button" class="btn btn-outline-primary btn-sm"
+                                        onclick="window.open('https://casita-bg.com/')">View project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 projects text-center">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img id="cover" src="./images/Responsive-design.png" alt="Avatar">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="margin-top: 20px; color: white;">Landing page</h4>
+                                <p style="height: 85px; padding: 20px; vertical-align: baseline;">JavaScript, HTML, CSS</p>
+                                <button id="view" type="button" class="btn btn-outline-primary btn-sm"
+                                        onclick="window.open('https://neterra.net/business-services')">View project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

@@ -1,32 +1,23 @@
+controllers.getContacts = function (context) {
+
+    context.loadPartials({
+        header: './views/common/header.hbs',
+        footer: './views/common/footer.hbs',
+    }).then(function () {
+        this.partial('./views/array/contacts/contacts.hbs')
+    });
+};
+
 controllers.getEducation = function (context) {
 
-    context.isAuth = userService.isAuth();
-    context.username = sessionStorage.getItem('username');
+    context.loadPartials({
+        header: './views/common/header.hbs',
+        footer: './views/common/footer.hbs',
+        education: './views/array/education/universities.hbs',
+    }).then(function () {
+        this.partial('./views/array/education/education.hbs')
+    });
 
-    if (userService.isAuth()) {
-
-        infoService.getEducation()
-            .then((res) => {
-                context.educations = res;
-
-                context.loadPartials({
-                    header: './views/common/header.hbs',
-                    footer: './views/common/footer.hbs',
-                    education: './views/array/education/universities.hbs',
-                }).then(function () {
-                    this.partial('./views/array/education/education.hbs')
-                });
-            })
-
-    } else {
-
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs'
-        }).then(function () {
-            this.partial('./views/common/permissions.hbs')
-        }).catch(err => console.log(err))
-    }
 };
 
 controllers.getSoftUni = function (context) {
@@ -97,7 +88,6 @@ controllers.getCertificateDetails = function (context) {
     }
 };
 
-
 controllers.getLtu = function (context) {
 
     context.isAuth = userService.isAuth();
@@ -130,32 +120,6 @@ controllers.getLtu = function (context) {
     }
 };
 
-controllers.getContacts = function (context) {
-
-    context.isAuth = userService.isAuth();
-    context.username = sessionStorage.getItem('username');
-
-    if (userService.isAuth()) {
-
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs',
-        }).then(function () {
-            this.partial('./views/array/contacts/contacts.hbs')
-        });
-
-    } else {
-
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs'
-        }).then(function () {
-            this.partial('./views/common/permissions.hbs')
-        }).catch(err => console.log(err))
-    }
-};
-
-
 controllers.getMessage = function (context) {
 
     context.isAuth = userService.isAuth();
@@ -181,39 +145,16 @@ controllers.getMessage = function (context) {
     }
 };
 
-
 controllers.getExperience = function (context) {
 
-    context.isAuth = userService.isAuth();
-    context.username = sessionStorage.getItem('username');
-
-    if (userService.isAuth()) {
-
-        infoService.getJobs()
-            .then((res) => {
-                console.log(res);
-                context.jobs = res;
-
-                context.loadPartials({
-                    header: './views/common/header.hbs',
-                    footer: './views/common/footer.hbs',
-                    job: './views/array/experience/jobs.hbs',
-                }).then(function () {
-                    this.partial('./views/array/experience/experience.hbs')
-                });
-            })
-
-    } else {
-
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs'
-        }).then(function () {
-            this.partial('./views/common/permissions.hbs')
-        }).catch(err => console.log(err))
-    }
+    context.loadPartials({
+        header: './views/common/header.hbs',
+        footer: './views/common/footer.hbs',
+        job: './views/array/experience/jobs.hbs',
+    }).then(function () {
+        this.partial('./views/array/experience/experience.hbs')
+    });
 };
-
 
 controllers.getJobDescription = function (context) {
 
@@ -262,61 +203,24 @@ controllers.getJobDescription = function (context) {
     }
 };
 
-
 controllers.getPortfolio = function (context) {
 
-    context.isAuth = userService.isAuth();
-    context.username = sessionStorage.getItem('username');
-
-    if (userService.isAuth()) {
-
-        infoService.getProjects()
-            .then((res) => {
-                console.log(res);
-                context.projects = res;
-
-                context.loadPartials({
-                    header: './views/common/header.hbs',
-                    footer: './views/common/footer.hbs',
-                    project: './views/array/portfolio/project.hbs',
-                }).then(function () {
-                    this.partial('./views/array/portfolio/portfolio.hbs')
-                });
-            })
-
-    } else {
-
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs'
-        }).then(function () {
-            this.partial('./views/common/permissions.hbs')
-        }).catch(err => console.log(err))
-    }
+    context.loadPartials({
+        header: './views/common/header.hbs',
+        footer: './views/common/footer.hbs',
+        project: './views/array/portfolio/project.hbs',
+    }).then(function () {
+        this.partial('./views/array/portfolio/portfolio.hbs')
+    });
 };
 
 controllers.getAbout = function (context) {
 
-    context.isAuth = userService.isAuth();
-    context.username = sessionStorage.getItem('username');
-
-    if (userService.isAuth()) {
-
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs',
-        }).then(function () {
-            this.partial('./views/array/about/about.hbs')
-        });
-
-    } else {
-
-        context.loadPartials({
-            header: './views/common/header.hbs',
-            footer: './views/common/footer.hbs'
-        }).then(function () {
-            this.partial('./views/common/permissions.hbs')
-        }).catch(err => console.log(err))
-    }
+    context.loadPartials({
+        header: './views/common/header.hbs',
+        footer: './views/common/footer.hbs',
+    }).then(function () {
+        this.partial('./views/array/about/about.hbs')
+    });
 
 };

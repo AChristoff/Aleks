@@ -520,3 +520,12 @@ canvas {
     top: 0;
     bottom: 0;
 }
+
+
+.projects:nth-child(odd) .flip-card {
+    margin-left: auto;
+}
+
+.projects:nth-child(even) .flip-card {
+    margin-right: auto;
+}
