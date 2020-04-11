@@ -63,8 +63,6 @@ li span a#aleks {
     margin-right: 10px !important;
 }
 
-
-
 li span.navbar-brand {
     margin: -3px 20px;
 }
@@ -95,7 +93,6 @@ li span.navbar-brand {
     border-left: none;
     border-right: none;
 }
-
 
 #first-col-left, #first-col-right {
     padding: 0px;
@@ -135,17 +132,14 @@ li span.navbar-brand {
     padding-inline: 0px;
 }
 
-
 .space {
     width: 50px;
 }
-
 
 #view {
     border: solid white 2px;
     color: white;
 }
-
 
 #view:hover {
     border: solid white 2px;
@@ -201,7 +195,6 @@ li span.navbar-brand {
     outline: none;
     padding-right: 8px;
 }
-
 
 /* ------------------------------------ */
 
@@ -284,7 +277,6 @@ div.head-open ul li:nth-child(n + 18) {
     margin: 2em auto;
     font-size: 1.5em;
 }
-
 
 .cert {
     width: 250px;
@@ -392,11 +384,9 @@ div#certificate-details {
     margin: 15px;
 }
 
-
 #navBtn {
     margin: 0px 0px 0px 0px;
 }
-
 
 .icons {
     background-color: white;
@@ -408,7 +398,6 @@ div#certificate-details {
 .showInfo:hover {
     cursor: pointer;
 }
-
 
 .moreInfo {
     margin-bottom: 5px;
@@ -439,6 +428,10 @@ div#certificate-details {
     font-size: 12px;
 }
 
+.job-title {
+    margin: 10px 0 0;
+}
+
 #cover {
     width: 290px;
     height: 208px;
@@ -449,7 +442,6 @@ div#certificate-details {
     font-size: 52px;
     color: #1A1A1A;
 }
-
 
 /*  ------------------------  */
 
@@ -521,11 +513,37 @@ canvas {
     bottom: 0;
 }
 
-
 .projects:nth-child(odd) .flip-card {
     margin-left: auto;
 }
 
 .projects:nth-child(even) .flip-card {
     margin-right: auto;
+}
+
+#navBtn {
+    float: right;
+}
+
+#aleks img {
+    max-height: 35px;
+    padding-right: 4px;
+}
+
+#nav .navbar-brand {
+    padding: 3px 0 6px;
+}
+
+@media (max-width: 991px) {
+    #my-site-nav {
+        font-size: 18px;
+        position: absolute;
+        background: #ffffff;
+        z-index: 100;
+        right: 0;
+        top: 43px;
+        padding: 0 37px;
+        border: 1px solid #E5E5E5;
+        border-top: 0;
+    }
 }
