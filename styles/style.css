@@ -548,3 +548,19 @@ canvas {
         border-top: 0;
     }
 }
+
+.not-found:hover {
+    text-decoration: none;
+}
+
+#not-found-lego {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: none;
+}
+
+.not-found-aleks-logo {
+    margin: -50px auto 50px;
+    max-height: 35px;
+}

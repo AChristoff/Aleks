@@ -224,3 +224,7 @@ controllers.getAbout = function (context) {
     });
 
 };
+
+controllers.getNotFound = function () {
+        this.partial('./views/common/not_found.hbs')
+};
