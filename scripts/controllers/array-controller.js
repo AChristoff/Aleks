@@ -226,5 +226,13 @@ controllers.getAbout = function (context) {
 };
 
 controllers.getNotFound = function () {
+
+    this.loadPartials({
+        header: './views/common/header.hbs',
+        footer: './views/common/footer.hbs',
+    }).then(function () {
         this.partial('./views/common/not_found.hbs')
+    });
+
+
 };

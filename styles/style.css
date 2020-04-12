@@ -564,3 +564,7 @@ canvas {
     margin: -50px auto 50px;
     max-height: 35px;
 }
+
+#footer-data {
+    white-space: nowrap;
+}
