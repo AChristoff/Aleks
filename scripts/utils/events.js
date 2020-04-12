@@ -178,7 +178,7 @@ function loadingPage() {
 
 async function getWeather() {
 
-    let baseUrl = 'http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/';
+    let baseUrl = 'https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/';
     let location = '51097';
     let apiKey = '?apikey=rCkwX8hea9lbhN4EKi7kf9HXiu0SWTWZ';
     let details = '&details=true';
