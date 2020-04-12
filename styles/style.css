@@ -567,4 +567,7 @@ canvas {
 
 #footer-data {
     white-space: nowrap;
+    text-align: right;
+    margin: 11px 0 0 26px;
+    padding-right: 10px;
 }
