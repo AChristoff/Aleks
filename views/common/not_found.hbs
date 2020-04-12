@@ -1,0 +1,27 @@
+{{> header}}
+
+<div class="container array">
+    <a href="#" class="not-found">
+        <div class="row">
+            <div class="col text-center">
+                <h3>Error 404</h3>
+                <h5>Page not found</h5>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <img id="not-found-lego" alt="aleksov-logo" src="./images/lego_404.png" data-alt-src="./images/color_lego_404.png">
+        </div>
+    </a>
+</div>
+
+<script>
+    function changeLegoImg() {
+        $('#not-found-lego').hover(sourceSwap, sourceSwap);
+    }
+
+    changeLegoImg();
+</script>
+
+{{> footer}}

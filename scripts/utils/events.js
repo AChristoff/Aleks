@@ -182,7 +182,7 @@ async function getWeather() {
     let location = '51097';
     let apiKey = '?apikey=rCkwX8hea9lbhN4EKi7kf9HXiu0SWTWZ';
     let details = '&details=true';
-    let units = '&metric=true'
+    let units = '&metric=true';
     let URL = baseUrl + location + apiKey + details + units;
 
     try {
