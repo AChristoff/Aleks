@@ -95,4 +95,40 @@
         width: 135px;
         margin: 20px;
     }
+
+    .progress {
+        height: 20px !important;
+    }
+
+/*  portfolio  & education */
+
+    .projects .flip-card {
+        flex: 1 1 40%;
+        margin: 5% 10%;
+        min-height: 350px;
+    }
+
+    .xp-info .enlarge-B,
+    .xp-info .enlarge-B:hover {
+        width: 70%;
+        height: auto;
+    }
+
+    .xp-info:not(:first-child) {
+        margin-top: 0.5rem;
+    }
+
+    .xp-info p {
+       font-size: 0.9rem;
+    }
+
+    .my-contacts .text-center {
+        flex: 1 1 70%;
+        margin: 2%;
+        font-size: 0.8rem;
+    }
+
+    .my-contacts .text-center .m-contact {
+        width: 375px;
+    }
 }

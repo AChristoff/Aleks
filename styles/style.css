@@ -523,14 +523,6 @@ canvas {
     bottom: 0;
 }
 
-.projects:nth-child(odd) .flip-card {
-    margin-left: auto;
-}
-
-.projects:nth-child(even) .flip-card {
-    margin-right: auto;
-}
-
 #navBtn {
     float: right;
 }
@@ -565,4 +557,47 @@ canvas {
     text-align: right;
     margin: 11px 0 0 26px;
     padding-right: 10px;
+}
+
+.projects:nth-child(odd) .flip-card {
+    /*margin-left: auto;*/
+}
+
+.projects:nth-child(even) .flip-card {
+    /*margin-right: auto;*/
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.projects .flip-card {
+    flex: 1 1 35%;
+    margin: 5%;
+}
+
+#view {
+    font-size: 0.75rem;
+}
+
+#cover {
+    width: auto;
+    height: 100%;
+}
+
+.my-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.my-contacts .text-center {
+    flex: 1 1 25%;
+    margin: 2%;
+}
+
+.my-contacts .text-center .m-contact {
+    width: 173px;
 }
