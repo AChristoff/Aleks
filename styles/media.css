@@ -25,6 +25,10 @@
         max-height: 75px;
     }
 
+    .home h1 {
+        font-size: 1.65rem;
+    }
+
     #navBtn {
         border-width: 3px;
     }
@@ -76,8 +80,8 @@
     }
 
     #download {
-        font-size: 1rem;
-        padding: 1rem;
+        font-size: 0.8rem;
+        padding: 0.8rem;
         text-align: center;
         margin: 0 0 2rem 0;
     }
@@ -85,6 +89,10 @@
     .download-btn-wrapper {
         padding: 0;
         text-align: center;
+    }
+
+    .tech-wrapper {
+        max-width: 90%;
     }
 
     .tech-wrapper h6 {
