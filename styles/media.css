@@ -63,8 +63,7 @@
         font-size: 1rem !important;
     }
 
-/*  about me   */
-
+    /*  about me   */
     .about-me,
     .skills {
         flex: 0 0 100%;
@@ -108,8 +107,7 @@
         height: 20px !important;
     }
 
-/*  portfolio  & education */
-
+    /*  portfolio  & education */
     .projects .flip-card {
         flex: 1 1 40%;
         margin: 5% 10%;
@@ -127,7 +125,7 @@
     }
 
     .xp-info p {
-       font-size: 0.9rem;
+        font-size: 0.9rem;
     }
 
     .my-contacts .text-center {
@@ -138,5 +136,9 @@
 
     .my-contacts .text-center .m-contact {
         width: 375px;
+    }
+
+    .job-title, .field-of-study {
+        margin-top: 17px;
     }
 }
