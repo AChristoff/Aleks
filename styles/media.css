@@ -1,0 +1,98 @@
+@media (max-width: 991px) {
+
+    html {
+        font-size: 40px;
+    }
+
+    #nav {
+        height: 160px;
+        border-bottom-width: 3px;
+    }
+
+    #my-site-nav {
+        font-size: 1rem;
+        position: absolute;
+        background: #ffffff;
+        z-index: 100;
+        right: 0;
+        top: 124px;
+        padding: 0 2rem;
+        border: 3px solid #E5E5E5;
+        border-top: 0;
+    }
+
+    #aleks img {
+        max-height: 75px;
+    }
+
+    #navBtn {
+        border-width: 3px;
+    }
+
+    div.container {
+        max-width: 90%;
+    }
+
+    #avatar {
+        width: 100%;
+    }
+
+    .container.array {
+        min-height: calc(100vh - 130px);
+    }
+
+    #footer {
+        height: 60px;
+        font-size: 0.65rem;
+        border-top-width: 3px;
+    }
+
+    #footer-links {
+        margin: 6px 0 0 10px;
+    }
+
+    #footer-links a {
+        margin-left: 25px;
+    }
+
+    .footer-icons {
+        font-size: 1rem !important;
+    }
+
+/*  about me   */
+
+    .about-me,
+    .skills {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-me p:first-child {
+        text-align: center;
+    }
+
+    .about-me .fa-user-tie {
+        font-size: 2.75rem;
+    }
+
+    #download {
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: center;
+        margin: 0 0 2rem 0;
+    }
+
+    .download-btn-wrapper {
+        padding: 0;
+        text-align: center;
+    }
+
+    .tech-wrapper h6 {
+        margin-bottom: 1rem !important;
+    }
+
+    .tech {
+        width: 135px;
+        margin: 20px;
+    }
+}

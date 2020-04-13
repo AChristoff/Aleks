@@ -1,6 +1,10 @@
 @import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Play|Zilla+Slab+Highlight&display=swap");
 
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: #ccc;
 }
@@ -379,6 +383,11 @@ div#certificate-details {
     transform: translateY(100px)
 }
 
+.tech-wrapper {
+    max-width: 90%;
+    margin: 0 auto 50px auto;
+}
+
 .tech {
     width: 70px;
     margin: 15px;
@@ -533,20 +542,6 @@ canvas {
 
 #nav .navbar-brand {
     padding: 3px 0 6px;
-}
-
-@media (max-width: 991px) {
-    #my-site-nav {
-        font-size: 18px;
-        position: absolute;
-        background: #ffffff;
-        z-index: 100;
-        right: 0;
-        top: 43px;
-        padding: 0 37px;
-        border: 1px solid #E5E5E5;
-        border-top: 0;
-    }
 }
 
 .not-found:hover {
