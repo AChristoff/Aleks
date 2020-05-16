@@ -573,9 +573,16 @@ canvas {
     justify-content: center;
 }
 
+.projects:after {
+    content: '';
+    display: block;
+    flex: 0 1 35%;
+    margin: 2%;
+}
+
 .projects .flip-card {
-    flex: 1 1 35%;
-    margin: 5%;
+    flex: 0 1 35%;
+    margin: 2%;
 }
 
 #view {
