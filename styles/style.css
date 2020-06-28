@@ -88,7 +88,7 @@ li span.navbar-brand {
 .array {
     margin-top: -91px;
     min-height: 100vh;
-    padding-top: 160px;
+    padding-top: 214px;
 }
 
 #nav {
@@ -96,6 +96,11 @@ li span.navbar-brand {
     padding-right: 0px;
     border-left: none;
     border-right: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 54px;
 }
 
 #first-col-left, #first-col-right {
@@ -374,13 +379,16 @@ div#certificate-details {
 .fixed-nav {
     z-index: 1000;
     background: #fff;
-    box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.6);
     position: fixed;
     top: -100px;
     left: 0;
     width: 100%;
     transition: transform .5s;
     transform: translateY(100px)
+}
+
+.fixed-nav #nav {
+    box-shadow: 0 5px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
 .tech-wrapper {
