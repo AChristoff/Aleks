@@ -42,7 +42,9 @@
     }
 
     .container.array {
-        min-height: calc(100vh - 130px);
+        min-height: 100vh;
+        margin-top: -64px;
+        padding-top: 300px;
     }
 
     #footer {

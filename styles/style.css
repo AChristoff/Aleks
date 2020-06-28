@@ -86,8 +86,8 @@ li span.navbar-brand {
 }
 
 .array {
-    margin-top: -91px;
-    min-height: calc(100vh + 54px);
+    margin-top: -38px;
+    min-height: 100vh;
     padding-top: 214px;
 }
 
