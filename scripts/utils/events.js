@@ -117,60 +117,61 @@ function barAnimation() {
     });
 }
 
-function m3x() {
-    let c = document.getElementById("c");
-    let ctx = c.getContext("2d");
+// function m3x() {
+//     let c = document.getElementById("c");
+//     let ctx = c.getContext("2d");
 
-    c.height = window.innerHeight;
-    c.width = window.innerWidth;
+//     c.height = window.innerHeight;
+//     c.width = window.innerWidth;
 
-    let binary = "1011010101010101010110101011101101011101001011";
-    setTimeout(() => {
-        binary = "⯌⯎✀✖✩✧✯✔✶*✎✤⯏⛏"
-    },1200);
+//     let binary = "1011010101010101010110101011101101011101001011";
+//     setTimeout(() => {
+//         binary = "⯌⯎✀✖✩✧✯✔✶*✎✤⯏⛏"
+//     },1200);
 
-    binary = binary.split("");
+//     binary = binary.split("");
 
-    let font_size = 12;
-    let columns = c.width / font_size;
+//     let font_size = 12;
+//     let columns = c.width / font_size;
 
-    let drops = [];
+//     let drops = [];
 
-    for (let x = 0; x < columns; x++)
-        drops[x] = 0;
+//     for (let x = 0; x < columns; x++)
+//         drops[x] = 0;
 
 
-    function draw() {
+//     function draw() {
 
-        ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
-        ctx.fillRect(0, 0, c.width, c.height);
+//         ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
+//         ctx.fillRect(0, 0, c.width, c.height);
 
-        ctx.fillStyle = "#dbe2e7";
-        ctx.font = font_size + "px arial";
+//         ctx.fillStyle = "#dbe2e7";
+//         ctx.font = font_size + "px arial";
 
-        for (let i = 0; i < drops.length; i++) {
+//         for (let i = 0; i < drops.length; i++) {
 
-            let text = binary[Math.floor(Math.random() * binary.length)];
+//             let text = binary[Math.floor(Math.random() * binary.length)];
 
-            ctx.fillText(text, i * font_size, drops[i] * font_size);
+//             ctx.fillText(text, i * font_size, drops[i] * font_size);
 
-            if (c.height && Math.random() > 0.925)
-                drops[i] = 0;
+//             if (c.height && Math.random() > 0.925)
+//                 drops[i] = 0;
 
-            drops[i]++;
-        }
-    }
+//             drops[i]++;
+//         }
+//     }
 
-    return setInterval(draw, 80);
-}
+//     return setInterval(draw, 80);
+// }
 
 
 function loadingPage() {
     $(document).ready(function () {
-        $("#root").fadeIn(4000);
+        $("#root").fadeIn(3000);
+        
         setTimeout(function () {
             $("#notifications").fadeIn(1000);
-        }, 4000);
+        }, 3000);
     });
 
 }

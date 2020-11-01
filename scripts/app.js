@@ -1,5 +1,14 @@
 const controllers = {};
 
+window.onload = function() {
+    Particles.init({
+      selector: '#background',
+      connectParticles: true,
+      maxParticles: 140,
+      color: '#808080',
+    });
+};
+
 $(() => {
     const app = Sammy('#root', function () {
         // load Handlebars

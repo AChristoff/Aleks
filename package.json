@@ -6,8 +6,9 @@
   "main": "pathToMain",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.0",
     "handlebars": "^4.0.11",
+    "jquery": "^3.4.0",
+    "particlesjs": "^2.2.3",
     "sammy": "^0.7.6"
   }
 }
