@@ -1,0 +1,8 @@
+@mixin add-font($name, $weight ,$style, $url) {
+	@font-face {
+		font-family: $name;
+		src: url($url) format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}

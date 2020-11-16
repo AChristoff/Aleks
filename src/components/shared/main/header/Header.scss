@@ -1,0 +1,19 @@
+@import '../../../../sass/variables';
+
+.app-header {
+  height: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $color-border-grey;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: auto;
+
+    img {
+      height: 80%;
+    }
+  }
+}

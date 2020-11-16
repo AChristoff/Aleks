@@ -1,8 +1,16 @@
+@import './sass/_variables.scss';
+@import './sass/_mixins.scss';
+@import './sass/_typography.scss';
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
+
+  .app-header, .app-main {
+      width: 100%;
+      max-width: 60em;
+      margin: 0 auto; 
+  }
 }
-
-

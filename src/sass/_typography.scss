@@ -1,0 +1,91 @@
+@include add-font('NunitoSans', normal, normal, '../assets/fonts/NunitoSans/NunitoSans-Regular.ttf');
+@include add-font('NunitoSans', normal, italic, '../assets/fonts/NunitoSans/NunitoSans-Italic.ttf');
+@include add-font('NunitoSans', bold, normal, '../assets/fonts/NunitoSans/NunitoSans-SemiBold.ttf');
+@include add-font('NunitoSans', bold, italic, '../assets/fonts/NunitoSans/NunitoSans-SemiBoldItalic.ttf');
+
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: #{$font-size-phone}/1.3 'NunitoSans', sans-serif;
+	color: $color-base-font-black;
+}
+
+body, form, input, option, select, textarea, table, th, td {
+	font: inherit;
+}
+
+$headings: h1, h2, h3, h4, h5, h6;
+$heading-size: 2.5;
+$step: 0.32;
+
+@each $heading in $headings {
+
+	#{$heading} {
+		font-size: #{$heading-size}rem;
+	}
+
+	$heading-size: $heading-size - $step;
+
+	@if ($step > 0.4) {
+		$step: $step - 0.2
+	}
+}
+
+#{$headings} {
+	font-family: 'NunitoSans';
+	line-height: 1.1em;
+	margin: 0.3em 0 0.5em 0;
+  font-weight: bold;
+	color: $color-base-font-black;
+	text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+p, ul, ol {
+	padding-bottom: 1.5em;
+}
+
+ul, ol {
+	padding-left: 2em;
+}
+
+li {
+	padding-left: 0.5em;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+a {
+	text-decoration: none;
+	color: $color-base-font-black;
+}
+
+blockquote {
+	padding: 1rem;
+	font-style: italic;
+	opacity: 0.5;
+
+	.quote:before,
+	.quote:after {
+		content: '"';
+		padding: 0 0.2em;
+	}
+
+	.author {
+		text-align: right;
+
+		&:before {
+			display: inline-block;
+			content: "‒";
+			padding-right: 0.5em;
+		}
+	}
+}

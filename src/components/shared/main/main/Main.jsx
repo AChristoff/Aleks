@@ -3,7 +3,7 @@ import {RouterMain} from "../../../../router/Router";
 function Main() {
   return (
     <main className="app-main">
-        <RouterMain />
+      <RouterMain />
     </main>
   );
 }
