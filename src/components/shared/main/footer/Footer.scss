@@ -1,3 +1,34 @@
+@import '../../../../sass/variables';
+
 .app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 100%;
+  max-width: 60em;
   margin: auto auto 0;
+  color: $color-base-font-grey;
+  border-top: 1px solid $color-border-grey;
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.8;
+
+    a {
+      font-size: 1.7em;
+      margin-left: 0.5em;
+
+      .footer-icons {
+        color: $color-base-font-grey;
+
+        &:hover {
+          color: $color-base-font-black;
+        }
+      }
+    }
+  }
+
 }

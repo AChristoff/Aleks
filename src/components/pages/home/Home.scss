@@ -1,0 +1,20 @@
+@import '../../../sass/variables.scss';
+
+.jumbotron {
+  text-align: center;
+
+  .stack {
+    color: $color-base-font-grey;
+    padding: 1.25em 0;
+    margin-bottom: 1em;
+    border-color: $color-border-grey;
+    border-style: solid;
+    border-width: 1px 0 1px;
+  }
+
+  .more {
+    color: $color-base-font-grey;
+    margin-right: 1em;
+  }
+}
+

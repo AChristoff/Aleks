@@ -9,14 +9,14 @@ function Home() {
 
       <h1>ALEKSANDAR HRISTOV</h1>
 
-      <p>Fullstack JavaScript Developer / MERN stack</p>
+      <p className="stack">Fullstack JavaScript Developer / MERN stack</p>
 
-      <Link to={'/about'}>
+      <Link to={'/portfolio'}>
         <img src="/assets/img/home-cover.png" alt="home-cover" />
       </Link>
 
       <h6>
-        View more about me
+        <span className="more">View more about me</span>
         <Link to={'/about'}>here</Link>
       </h6>
 
