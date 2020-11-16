@@ -3,3 +3,24 @@ html, body, #root  {
   margin: 0;
   letter-spacing: 1px;
 }
+
+html {
+  overflow-y: scroll;
+
+  // for Mozilla
+  scrollbar-width: thin;
+  scrollbar-color: #727171 rgba(255, 255, 255, 0);
+ 
+  // for all Browsers
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #727171;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+}

@@ -1,6 +1,10 @@
+import './About.scss';
+
 function About() {
   return (
-    <h3>ABOUT PAGE</h3>
+    <div className="about">
+      <h3>ABOUT PAGE</h3>
+    </div>
   );
 }
 
