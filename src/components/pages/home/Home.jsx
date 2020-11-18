@@ -11,7 +11,7 @@ function Home() {
 
       <p className="stack">Front-end Developer / MERN stack</p>
 
-      <Link to={'/portfolio'}>
+      <Link to={'/portfolio'} className="home-cover">
         <img src="/assets/img/home-cover.png" alt="home-cover" />
       </Link>
 

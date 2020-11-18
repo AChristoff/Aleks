@@ -1,35 +1,37 @@
-import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import Burger from './partials/Burger'
-import './Nav.scss'
-import { NavContext } from '../../../../context/nav-context.js';
-
+import { useState } from 'react';
+import Burger from './partials/Burger';
+import './Nav.scss';
 
 function Nav() {
 
-  //Context
-  const {active} = useContext(NavContext);
+   //State
+   let [navClick, setNavClick] = useState(0);
+
+   const toggleNav = () => {
+    setNavClick(++navClick);
+  };
 
   return (
     <nav className="site-nav">
 
-      <Burger />
+      <Burger navClick={navClick}/>
 
-      <ul className={active ? 'active' : ''}>
+      <ul>
         <li className="home-btn">
-          <NavLink to="/" exact activeClassName="active">
+          <NavLink to="/" exact activeClassName="active" onClick={toggleNav}>
             Home
           </NavLink>
         </li>
 
         <li className="all-offers-tab">
-          <NavLink to="/about" exact>
+          <NavLink to="/about" exact onClick={toggleNav}>
             About
           </NavLink>
         </li>
 
         <li className="all-offers-tab">
-          <NavLink to="/portfolio" exact>
+          <NavLink to="/portfolio" exact onClick={toggleNav}>
             Portfolio
           </NavLink>
         </li>

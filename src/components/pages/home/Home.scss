@@ -12,6 +12,14 @@
     border-width: 1px 0 1px;
   }
 
+  .home-cover {
+    width: 100%;
+
+    img {
+      max-width: 90%;;
+    }
+  }
+
   .more {
     color: $color-base-font-grey;
     margin-right: 1em;

@@ -1,15 +1,19 @@
 import './Burger.scss'
-import { useContext } from 'react';
-import { NavContext } from '../../../../../context/nav-context.js';
+import { useState, useEffect } from 'react';
 
-function Burger() {
+function Burger({navClick = false}) {
   
-  //Context
-  const {active, updateNavContext} = useContext(NavContext);
+  //State
+  const [active, setActive] = useState(false);
 
   const toggleNav = () => {
-    updateNavContext('active', !active);
+    setActive(!active);
   };
+  
+  //Component did update
+  useEffect(() => {
+    setActive(false);
+  }, [navClick])
 
   return (
     <div className={`icon-wrapper ${active ? 'active' : ''}`} onClick={toggleNav}>

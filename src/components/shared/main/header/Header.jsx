@@ -6,12 +6,13 @@ function Header() {
   return (
     <header className="app-header">   
 
+<div className="some-test">
         <Link to={'/home'} className="logo">
           <img src="/assets/img/aleksov-logo.svg" alt="home-cover" />
         </Link>
 
         <Nav />
-
+</div>
     </header>
   );
 }

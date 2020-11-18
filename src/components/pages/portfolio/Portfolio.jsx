@@ -14,7 +14,7 @@ function Portfolio() {
           buttons={[
             {
               link: 'https://prodavalnik.aleksov.work/',
-              title: 'View project',
+              title: 'Project',
               class: 'view-btn',
             },
             {

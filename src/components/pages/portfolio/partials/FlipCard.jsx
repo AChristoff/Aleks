@@ -15,7 +15,7 @@ function FlipCard({img, title, description, buttons = []}) {
           
           <p className="description">{description}</p>
 
-          <section>
+          <section className="buttons">
           {buttons.map((button, index) => (
             <a key={index} type="button" className={`card-btn ${button.class}`} href={button.link} target="_blank" rel="noreferrer">
               {button.title}
