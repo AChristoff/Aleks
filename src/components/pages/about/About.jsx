@@ -7,6 +7,10 @@ function About() {
     <div className="about">
       <h3>ABOUT ME</h3>
 
+      <section className="about-cover">
+        <img src="/assets/img/about-cover.png" alt="mail" />
+      </section>
+
       <section className="general-info">I am a person with strong analytical thinking and excellent attention to detail. I always prioritize to meet my deadlines. I have a team oriented approach and I am a motivated self starter who believes in high standards as a way of work. Passionate, collaborative and results oriented. Always open to acquire new knowledge and skills.</section>
 
       <section className="main-info">
@@ -20,7 +24,7 @@ function About() {
             </h5>
             <ul>
               <li>Address</li>
-              <li>1618 Sofia, Bulgaria</li>
+              <li>Sofia, Bulgaria</li>
               <li>Phone</li>
               <li>+359 888 199 889</li>
               <li>E-mail</li>

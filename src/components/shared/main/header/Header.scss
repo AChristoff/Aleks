@@ -1,19 +1,32 @@
 @import '../../../../sass/variables';
 
-.app-header {
-  height: 4em;
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: 1px solid $color-border-grey;
-
-  .logo {
+@media (min-width: 1px) {
+  .app-header {
+    height: 4em;
     display: flex;
-    align-items: center;
-    height: 100%;
-    margin: 0 auto 0 0.5em;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $color-border-grey;
+    background: $pure-white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  
 
-    img {
-      height: 69%;
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      margin: 0 auto 0 0.5em;
+
+      img {
+        height: 69%;
+      }
     }
   }
 }
+
+@media (min-width: 769px) {}
+
+@media (min-width: 1281px) {}

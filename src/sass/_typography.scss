@@ -5,16 +5,31 @@
 @include add-font('NunitoSans', 700, normal, '../assets/fonts/NunitoSans/NunitoSans-Bold.ttf');
 @include add-font('NunitoSans', 700, italic, '../assets/fonts/NunitoSans/NunitoSans-BoldItalic.ttf');
 
+@media (min-width: 1px) {
+	html {
+		font: #{$font-size-phone}/1.3 'NunitoSans', sans-serif;
+		color: $color-base-font-black;
+	}
+}
+
+@media (min-width: 769px) {
+	html {
+		font: #{$font-size-tablet}/1.3 'NunitoSans', sans-serif;
+		color: $color-base-font-black;
+	}
+}
+
+@media (min-width: 1281px) {
+	html {
+		font: #{$font-size-desktop}/1.3 'NunitoSans', sans-serif;
+		color: $color-base-font-black;
+	}
+}
 
 *, *:before, *:after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-html {
-	font: #{$font-size-phone}/1.3 'NunitoSans', sans-serif;
-	color: $color-base-font-black;
 }
 
 body, form, input, option, select, textarea, table, th, td {
