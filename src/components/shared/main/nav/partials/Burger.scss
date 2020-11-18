@@ -73,14 +73,14 @@
   
     &.active .menu-icon:before {
       top: 0;
-      left: 0;
+      left: -1px;
       width: 2em;
       transform: rotate(45deg);
     }
   
     &.active .menu-icon:after {
       top: 0;
-      left: 0;
+      left: -1px;
       width: 2em;
       transform: rotate(135deg);
     }
