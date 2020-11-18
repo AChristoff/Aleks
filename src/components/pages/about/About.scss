@@ -2,7 +2,12 @@
 
 .about {
   text-align: center;
-  color: #8e999f;
+  color: $color-base-font-black;
+
+  .general-info {
+    text-align: justify;
+    margin: 2em 4em;
+  }
 
   ul {
     list-style: none;
@@ -15,19 +20,28 @@
     .left-col,
     .right-col {
       ul {
-        color: $color-base-font-black;
-        padding: 0 3em;
+        padding: 0 3.5em;
         margin: 0 auto;
 
         li {
           display: flex;
           justify-content: space-between;
           margin-bottom: 0.2em;
+          
+          &.left {
+            justify-content: flex-start;
+            text-align: left;
+          }
+
+          &.position {
+            font-weight: 600;
+            margin: 1em 0 0.5em 0;
+          }
         }
       }
 
-      & > section {
-        margin-bottom: 2em;
+      &>section {
+        margin-bottom: 3em;
       }
     }
 
@@ -39,7 +53,8 @@
       width: 70%;
       margin-left: 3em;
 
-      .work-history {
+      .work-history,
+      .education {
         ul:first-of-type {
           margin-bottom: 3em;
         }
@@ -65,12 +80,19 @@
         li:nth-child(even):not(:last-child) {
           margin-bottom: 0.75em;
         }
+
+        li:last-child {
+          img {
+            width: 11em;
+            margin: 0 0 0 -0.1em;
+          }
+        }
       }
     }
 
     .about-subtitles {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       border-bottom: 1px solid $color-border-grey;
       margin-bottom: 1em;
@@ -84,12 +106,34 @@
         border-radius: 50%;
         justify-content: center;
         align-items: center;
-        margin: 0 0.5em 0.25em 0;
+        margin: 0 0.5em 0.3em 0.3em;
 
         svg {
           font-size: 1.5em;
           margin-top: -0.1em;
           font-weight: normal;
+        }
+      }
+    }
+
+    .education {
+      .about-subtitles {
+        .about-icons {
+          svg {
+            font-size: 1.7em;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .skills {
+      .about-subtitles {
+        .about-icons {
+          svg {
+            font-size: 1.7em;
+            margin: -0.12em -0.12em 0 0;
+          }
         }
       }
     }
