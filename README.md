@@ -3,7 +3,7 @@
 &#128640; https://alekshristov.com/
 
 <hr>
-GitHub Pages CI script
-``` 
+GitHub Pages CI script:
+```
 npm run deploy
 ```
