@@ -2,8 +2,8 @@
 
 &#128640; https://alekshristov.com/
 
-
-GitHub Pages CI script:
+<pre>
+GitHub Pages deploy script:
 ```
 npm run deploy
 ```
