@@ -1,157 +1,321 @@
 @import '../../../sass/variables';
 
-.about {
-  text-align: center;
-  color: $color-base-font-black;
+@media (min-width: 1px) {
+  .about {
+    text-align: center;
+    color: $color-base-font-black;
 
-  .about-cover {
-    display: block;
-    border-radius: 0.3em;
-    overflow: hidden;
-    position: relative;
-    width: 89%;
-    height: 25em;
-    margin: 0 auto;
+    .about-cover {
+      display: block;
+      border-radius: 0.3em;
+      overflow: hidden;
+      position: relative;
+      width: 89%;
+      height: 0;
+      margin: 0 auto;
+      padding-top: 40%;
 
-    img {
-      position: absolute;
-      width: 100%;
-      height: auto;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
-  }
 
-  .general-info {
-    text-align: justify;
-    margin: 2em 4em;
-  }
+    .general-info {
+      text-align: justify;
+      margin: 2em 1.5em;
+    }
 
-  ul {
-    list-style: none;
-  }
+    ul {
+      list-style: none;
+    }
 
-  .main-info {
+    .main-info {
 
-    display: flex;
+      display: flex;
+      flex-wrap: wrap;
 
-    .left-col,
-    .right-col {
-      ul {
-        padding: 0 3.5em;
+      .left-col,
+      .right-col {
+
+        width: 95%;
         margin: 0 auto;
 
-        li {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 0.2em;
-          
-          &.left {
-            justify-content: flex-start;
-            text-align: left;
-          }
+        ul {
+          padding: 0 1em;
+          margin: 0 auto;
 
-          &.position {
-            font-weight: 600;
-            margin: 1em 0 0.5em 0;
+          li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.2em;
+
+            &.left {
+              justify-content: flex-start;
+              text-align: left;
+            }
+
+            &.position {
+              font-weight: 600;
+              margin: 1em 0 0.5em 0;
+            }
           }
         }
-      }
 
-      &>section {
-        margin-bottom: 3em;
-      }
-    }
-
-    .left-col {
-      width: 30%;
-    }
-
-    .right-col {
-      width: 70%;
-      margin-left: 3em;
-
-      .work-history,
-      .education {
-        ul:first-of-type {
+        &>section {
           margin-bottom: 3em;
         }
-
-        li:first-child {
-          font-weight: 700;
-          font-size: 1.2em;
-          text-transform: uppercase;
-        }
-
-        li:nth-child(2) {
-          margin-bottom: 1.5em;
-        }
       }
-    }
 
-    .contacts {
-      ul {
-        li:nth-child(odd) {
-          font-weight: 700;
-        }
+      .right-col {
+      
+        .work-history,
+        .education {
+          ul:first-of-type {
+            margin-bottom: 3em;
+          }
 
-        li:nth-child(even):not(:last-child) {
-          margin-bottom: 0.75em;
-        }
+          li:first-child {
+            font-weight: 700;
+            font-size: 1.2em;
+            text-transform: uppercase;
+          }
 
-        li:last-child {
-          img {
-            width: 11em;
-            margin: 0 0 0 -5px;
+          li:nth-child(2) {
+            margin-bottom: 1.5em;
           }
         }
       }
-    }
 
-    .about-subtitles {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      border-bottom: 1px solid $color-border-grey;
-      margin-bottom: 1em;
+      .contacts {
+        ul {
+          li:nth-child(odd) {
+            font-weight: 700;
+          }
 
-      .about-icons {
-        background: #333333;
-        color: #ffffff;
-        display: inline-flex;
-        height: 2.5em;
-        width: 2.5em;
-        border-radius: 50%;
-        justify-content: center;
+          li:nth-child(even):not(:last-child) {
+            margin-bottom: 0.75em;
+          }
+
+          li:last-child {
+            img {
+              width: 11em;
+              margin: 0 0 0 -5px;
+            }
+          }
+        }
+      }
+
+      .about-subtitles {
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
-        margin: 0 0.5em 0.3em 0.3em;
+        border-bottom: 1px solid $color-border-grey;
+        margin-bottom: 1em;
 
-        svg {
-          font-size: 1.5em;
-          margin-top: -0.1em;
-          font-weight: normal;
+        .about-icons {
+          background: #333333;
+          color: #ffffff;
+          display: inline-flex;
+          height: 2.5em;
+          width: 2.5em;
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;
+          margin: 0 0.5em 0.3em 0.3em;
+
+          svg {
+            font-size: 1.5em;
+            margin-top: -0.1em;
+            font-weight: normal;
+          }
         }
       }
-    }
 
-    .education {
-      .about-subtitles {
-        .about-icons {
-          svg {
-            font-size: 1.7em;
-            margin-top: 0;
+      .education {
+        .about-subtitles {
+          .about-icons {
+            svg {
+              font-size: 1.7em;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .skills {
+        .about-subtitles {
+          .about-icons {
+            svg {
+              font-size: 1.7em;
+              margin: -0.12em -0.12em 0 0;
+            }
           }
         }
       }
     }
+  }
+}
 
-    .skills {
+@media (min-width: 768px) {
+  .about {
+    text-align: center;
+    color: $color-base-font-black;
+
+    .about-cover {
+      display: block;
+      border-radius: 0.3em;
+      overflow: hidden;
+      position: relative;
+      width: 89%;
+      height: 25em;
+      margin: 0 auto;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .general-info {
+      text-align: justify;
+      margin: 2em 4em;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .main-info {
+
+      display: flex;
+      flex-wrap: nowrap;
+
+      .left-col,
+      .right-col {
+        ul {
+          padding: 0 3.5em;
+          margin: 0 auto;
+
+          li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.2em;
+
+            &.left {
+              justify-content: flex-start;
+              text-align: left;
+            }
+
+            &.position {
+              font-weight: 600;
+              margin: 1em 0 0.5em 0;
+            }
+          }
+        }
+
+        &>section {
+          margin-bottom: 3em;
+        }
+      }
+
+      .left-col {
+        width: 30%;
+      }
+
+      .right-col {
+        width: 70%;
+        margin-left: 3em;
+
+        .work-history,
+        .education {
+          ul:first-of-type {
+            margin-bottom: 3em;
+          }
+
+          li:first-child {
+            font-weight: 700;
+            font-size: 1.2em;
+            text-transform: uppercase;
+          }
+
+          li:nth-child(2) {
+            margin-bottom: 1.5em;
+          }
+        }
+      }
+
+      .contacts {
+        ul {
+          li:nth-child(odd) {
+            font-weight: 700;
+          }
+
+          li:nth-child(even):not(:last-child) {
+            margin-bottom: 0.75em;
+          }
+
+          li:last-child {
+            img {
+              width: 11em;
+              margin: 0 0 0 -5px;
+            }
+          }
+        }
+      }
+
       .about-subtitles {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid $color-border-grey;
+        margin-bottom: 1em;
+
         .about-icons {
+          background: #333333;
+          color: #ffffff;
+          display: inline-flex;
+          height: 2.5em;
+          width: 2.5em;
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;
+          margin: 0 0.5em 0.3em 0.3em;
+
           svg {
-            font-size: 1.7em;
-            margin: -0.12em -0.12em 0 0;
+            font-size: 1.5em;
+            margin-top: -0.1em;
+            font-weight: normal;
+          }
+        }
+      }
+
+      .education {
+        .about-subtitles {
+          .about-icons {
+            svg {
+              font-size: 1.7em;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .skills {
+        .about-subtitles {
+          .about-icons {
+            svg {
+              font-size: 1.7em;
+              margin: -0.12em -0.12em 0 0;
+            }
           }
         }
       }

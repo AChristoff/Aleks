@@ -124,14 +124,14 @@ function About() {
               <li>
                 <span>2019 - Present</span> <span>NETERRA Ltd.</span>
               </li>
-              <li>Develop the Front-end of Enterprise Resource Planning Software ERP</li>
-              <li>Develop Landing Pages for company events</li>
-              <li>JavaScript | CSS | HTML</li>
-              <li>Bootstrap | jQuery</li>
-              <li>Responsive Design</li>
-              <li>Strong Git management</li>
-              <li>Excellent communication with QA team</li>
-              <li>Planning sprints using Scrum based methodology</li>
+              <li className="left">Develop the Front-end of Enterprise Resource Planning Software ERP</li>
+              <li className="left">Develop Landing Pages for company events</li>
+              <li className="left">JavaScript | CSS | HTML</li>
+              <li className="left">Bootstrap | jQuery</li>
+              <li className="left">Responsive Design</li>
+              <li className="left">Strong Git management</li>
+              <li className="left">Excellent communication with QA team</li>
+              <li className="left">Planning sprints using Scrum based methodology</li>
             </ul>
 
             <ul>
