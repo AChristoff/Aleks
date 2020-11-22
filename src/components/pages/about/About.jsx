@@ -59,7 +59,7 @@ function About() {
                 <span>Vue</span> <Rating stars="2" />
               </li>
               <li>
-                <span>Sass</span> <Rating stars="3" />
+                <span>Sass</span> <Rating stars="4" />
               </li>
               <li>
                 <span>Node</span> <Rating stars="3" />
@@ -126,7 +126,7 @@ function About() {
               </li>
               <li className="left">Develop the Front-end of Enterprise Resource Planning Software ERP</li>
               <li className="left">Develop Landing Pages for company events</li>
-              <li className="left">JavaScript | CSS | HTML</li>
+              <li className="left">JavaScript | CSS/Sass | HTML</li>
               <li className="left">Bootstrap | jQuery</li>
               <li className="left">Responsive Design</li>
               <li className="left">Strong Git management</li>
@@ -135,7 +135,7 @@ function About() {
             </ul>
 
             <ul>
-              <li>Project Manager | Team lead | Engineer</li>
+              <li>Project Manager | Team lead | Drafter</li>
               <li>
                 <span>2014 - 2019</span> <span>WALLTOPIA AD</span>
               </li>
@@ -161,7 +161,7 @@ function About() {
               <li className="left">Daily consultations with employees in the department of urgent cases in their work</li>
               <li className="left">Permanent work with design, architecture, engineering, administration software - such as AutoCAD, AdvanceSteel, SketchUp, Excel, SAP and others</li>
               <li className="position">
-                <span>1Y</span> <span>Engineer</span>
+                <span>1Y</span> <span>Drafter</span>
               </li>
               <li className="left">Preparation of complete technical documentation</li>
               <li className="left">R & D - creating new products and details</li>
