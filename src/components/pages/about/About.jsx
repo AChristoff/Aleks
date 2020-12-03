@@ -56,7 +56,7 @@ function About() {
                 <span>React</span> <Rating stars="4" />
               </li>
               <li>
-                <span>Vue</span> <Rating stars="2" />
+                <span>Vue</span> <Rating stars="3" />
               </li>
               <li>
                 <span>Sass</span> <Rating stars="4" />

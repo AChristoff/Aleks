@@ -9,7 +9,7 @@ function Home() {
 
       <h1>ALEKSANDAR HRISTOV</h1>
 
-      <p className="stack">Front-end Developer / MERN stack</p>
+      <p className="stack">Front-end Developer / MERN-MEVN stack</p>
 
       <Link to={'/portfolio'} className="home-cover">
         <img src="/assets/img/home-cover.png" alt="home-cover" />
