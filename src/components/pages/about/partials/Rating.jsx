@@ -8,7 +8,7 @@ const createRating = () => {
 
   for (let i = 0; i < points; i++) {
     rating.push(
-      <span>
+      <span key={i}>
         { i < Number(stars) ? <FaCircle /> : <FaRegCircle /> }
       </span>
     )
