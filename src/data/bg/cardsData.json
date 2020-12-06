@@ -1,0 +1,86 @@
+{
+  "cards": [
+    {
+      "img": "mern.png",
+      "title": "Fullstack JavaScript",
+      "description": "ReactJS, MongoDB, NodeJS, Expres",
+      "buttons": [
+        {
+          "link": "https://prodavalnik.aleksov.work/",
+          "title": "Проект",
+          "class": "view-btn"
+        },
+        {
+          "link": "https://github.com/AChristoff/prodavalnik/",
+          "title": "Код",
+          "class": "repo-btn"
+        },
+        {
+          "link": "https://prodavalnik-api.aleksov.work/api/docs/",
+          "title": "ППИ",
+          "class": "api-btn"
+        }
+      ]
+    },
+    {
+      "img": "casita-logo.png",
+      "title": "Business Website",
+      "description": "Vue.js & Sass",
+      "buttons": [
+        {
+          "link": "https://casita-bg.com/",
+          "title": "Виж проект",
+          "class": "view-btn"
+        }
+      ]
+    },
+    {
+      "img": "nete-logo.png",
+      "title": "NETERRA Landing page",
+      "description": "JavaScript, HTML, CSS",
+      "buttons": [
+        {
+          "link": "https://neterra.net/business-services/",
+          "title": "Виж проект",
+          "class": "view-btn"
+        }
+      ]
+    },
+    {
+      "img": "gift-card.png",
+      "title": "Gift Card story",
+      "description": "Vue.js & Sass",
+      "buttons": [
+        {
+          "link": "https://neterra.tv/gift-card",
+          "title": "Виж проект",
+          "class": "view-btn"
+        }
+      ]
+    },
+    {
+      "img": "ecta-logo.png",
+      "title": "ECTA 2020 landing page",
+      "description": "JavaScript, HTML, CSS",
+      "buttons": [
+        {
+          "link": "https://www.ectacountryfocus.eu/",
+          "title": "Виж проект",
+          "class": "view-btn"
+        }
+      ]
+    },
+    {
+      "img": "wordpress.png",
+      "title": "WP Custom theme",
+      "description": "Wordpress & Sass",
+      "buttons": [
+        {
+          "link": "http://custom-wp-theme.fast-page.org/",
+          "title": "Виж проект",
+          "class": "view-btn"
+        }
+      ]
+    }
+  ]
+}

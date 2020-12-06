@@ -1,0 +1,16 @@
+{
+  "about": 
+    {
+      "title": "About me",
+      "generalInfo": "I am a person with strong analytical thinking and excellent attention to detail. I always prioritize to meet my deadlines. I have a team oriented approach and I am a motivated self starter who believes in high standards as a way of work. Passionate, collaborative and results oriented. Always open to acquire new knowledge and skills.",
+      "contacts": {
+        "title": "Contacts",
+        "address": {
+          "title": "Address",
+          "address": "Sofia, Bulgaria"
+        },
+        "phone": "Phone",
+        "email": "E-mail"
+      }
+    }
+}
