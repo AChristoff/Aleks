@@ -2,6 +2,7 @@ import './About.scss';
 import { useContext } from 'react'
 import { FaUserTie, FaPuzzlePiece, FaBriefcase, FaGraduationCap, FaFlag } from 'react-icons/fa';
 import Rating from './partials/Rating';
+
 import { LangContext } from '../../../context/langContext';
 import pageDataEN from '../../../data/en/pageData'
 import pageDataBG from '../../../data/bg/pageData'

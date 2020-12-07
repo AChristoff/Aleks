@@ -43,8 +43,8 @@ function Nav() {
           </NavLink>
         </li>
 
-        <li className='all-offers-tab' onClick={changeLang}>
-          <span>| BG</span>
+        <li className='all-offers-tab lang-tab' onClick={changeLang}>
+          <span className="lang">{lang}</span>
         </li>
       </ul>
     </nav>
