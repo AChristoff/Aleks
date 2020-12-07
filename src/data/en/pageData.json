@@ -1,21 +1,18 @@
 {
-  "nav": 
-  {
+  "nav": {
     "home": "Home",
     "about": "About",
     "portfolio": "Portfolio",
     "lang": "BG"
   },
-  "home": 
-  {
+  "home": {
     "hello": "Hello, I am",
     "name": "Aleksandar Hristov",
     "jobTitle": "Front-end Developer / MERN-MEVN stack",
     "more": "View more about me",
     "link": "here"
   },
-  "about": 
-  {
+  "about": {
     "title": "About me",
     "generalInfo": "I am a person with strong analytical thinking and excellent attention to detail. I always prioritize to meet my deadlines. I have a team oriented approach and I am a motivated self starter who believes in high standards as a way of work. Passionate, collaborative and results oriented. Always open to acquire new knowledge and skills.",
     "contacts": {
@@ -52,8 +49,67 @@
             "Excellent communication with QA team",
             "Planning sprints using Scrum based methodology"
           ]
+        },
+        "walltopia": {
+          "title": "Project Manager | Team lead | Drafter",
+          "employer": "WALLTOPIA AD",
+          "period": "2014 - 2019",
+          "pm": {
+            "title": "Project Manager",
+            "time": "1Y",
+            "description": [
+              "Complete organization of the project timeline from beginning to end",
+              "Keeping in touch with customers",
+              "Presence at management briefings with completed reports",
+              "Requesting and selecting transport for all materials",
+              "Providing tickets, lodgings and machines needed for technicians in different countries",
+              "Available for permanent contact with groups of technicians 24/7",
+              "Working in a dynamic and multicultural environment"
+            ]
+          },
+          "teamLead": {
+            "title": "Team lead",
+            "time": "3Y",
+            "description": [
+              "Drawing up work schedules and task assignments for department employees",
+              "Weekly presence at management briefings with completed work reports",
+              "Preparation of complete technical documentation - production and installation drawings accompanied by detailed specifications for production, loading and assembly",
+              "Quality control of the entire production of the department",
+              "Process Management - analyzing, automating and improving workflows to: increase productivity and reduce the possibility of errors",
+              "Research and development (R & D) - creating new products and details. Implementing new technologies and refining existing ones. Testing and communicating with international laboratories to certify new products",
+              "Daily consultations with employees in the department of urgent cases in their work",
+              "In constant contact with the following departments: Engineering, Design, Project Management, Logistics and Walltopia Plants, on issues related to current and future objects",
+              "Permanent work with design, architecture, engineering, administration software - such as AutoCAD, AdvanceSteel, SketchUp, Excel, SAP and others"
+            ]
+          },
+          "drafter": {
+            "title": "Drafter",
+            "time": "1Y",
+            "description": [
+              "Preparation of complete technical documentation",
+              "R & D - creating new products and details",
+              "Project communication with foreign clients",
+              "Permanent work with design, architecture, engineering, administration software - such as AutoCAD, AdvanceSteel, SketchUp, Excel, SAP and more"
+            ]
+          }
         }
       }
+    },
+    "education": {
+      "title": "Education",
+      "softUni": {
+        "specialty": "JavaScript Web Developer",
+        "period": "2018 - 2020",
+        "university": "SoftUni - Sofia"
+      },
+      "forestry": {
+        "specialty": "Furniture Design & Engineering",
+        "period": "2006 - 2010",
+        "university": "University of Forestry - Sofia"
+      }
     }
+  },
+  "portfolio": {
+    "title": "Portfolio"
   }
 }

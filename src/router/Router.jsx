@@ -2,7 +2,7 @@ import {Switch, Route} from 'react-router-dom';
 import Home from '../components/pages/home/Home';
 import About from '../components/pages/about/About';
 import Portfolio from '../components/pages/portfolio/Portfolio';
-import NotFound from '../components/pages/404/NotFound';
+import NotFound from '../components/pages/errors/NotFound';
 
 export function RouterMain() {
   return (

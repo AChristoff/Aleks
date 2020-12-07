@@ -1,19 +1,26 @@
 import './Portfolio.scss'
 import FlipCard from './partials/FlipCard'
+
+import { useContext } from 'react'
+
+//  For translations
+import { LangContext } from '../../../context/langContext';
+import pageDataEN from '../../../data/en/pageData'
+import pageDataBG from '../../../data/bg/pageData'
 import DataEN from '../../../data/en/cardsData'
 import DataBG from '../../../data/bg/cardsData'
-import { useContext } from 'react'
-import { LangContext } from '../../../context/langContext';
+
 
 function Portfolio() {
   
   //Context
   const { lang } = useContext(LangContext)
   const { cards } = lang === 'en' ? DataEN : DataBG;
+  const { portfolio } = lang === 'en' ? pageDataEN : pageDataBG;
 
   return (
     <div className='portfolio'>
-      <h3 className='page-title'>Portfolio</h3>
+      <h3 className='page-title'>{portfolio.title}</h3>
 
       <section className='card-list'>
         {cards.map((card, index) => (

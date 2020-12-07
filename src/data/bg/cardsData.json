@@ -2,7 +2,7 @@
   "cards": [
     {
       "img": "mern.png",
-      "title": "Fullstack JavaScript",
+      "title": "Сайт за обяви",
       "description": "ReactJS, MongoDB, NodeJS, Expres",
       "buttons": [
         {
@@ -24,7 +24,7 @@
     },
     {
       "img": "casita-logo.png",
-      "title": "Business Website",
+      "title": "Бизнес сайт",
       "description": "Vue.js & Sass",
       "buttons": [
         {
@@ -36,7 +36,7 @@
     },
     {
       "img": "nete-logo.png",
-      "title": "NETERRA Landing page",
+      "title": "Лендинг страница 'NETERRA'",
       "description": "JavaScript, HTML, CSS",
       "buttons": [
         {
@@ -48,7 +48,7 @@
     },
     {
       "img": "gift-card.png",
-      "title": "Gift Card story",
+      "title": "Покупка на Гифт карти",
       "description": "Vue.js & Sass",
       "buttons": [
         {
@@ -60,7 +60,7 @@
     },
     {
       "img": "ecta-logo.png",
-      "title": "ECTA 2020 landing page",
+      "title": "Лендинг страница 'ECTA-2020'",
       "description": "JavaScript, HTML, CSS",
       "buttons": [
         {
@@ -72,7 +72,7 @@
     },
     {
       "img": "wordpress.png",
-      "title": "WP Custom theme",
+      "title": "'WP' Персонализирана тема",
       "description": "Wordpress & Sass",
       "buttons": [
         {
