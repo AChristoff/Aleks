@@ -13,12 +13,15 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
-    if(window.innerWidth < 1080) {
+    if (window.innerWidth < 1080) {
       setIsMobile(true)
+    }
+    if (window.innerWidth > 768) {
+      document.querySelector('.icon-wrapper').classList.remove('active')
     } else {
       setIsMobile(false)
     }
-  };
+  }
 
   //Component did mount
   useEffect(() => {
