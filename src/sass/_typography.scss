@@ -1,27 +1,25 @@
-@include add-font('NunitoSans', normal, normal, '../assets/fonts/NunitoSans/NunitoSans-Regular.ttf');
-@include add-font('NunitoSans', normal, italic, '../assets/fonts/NunitoSans/NunitoSans-Italic.ttf');
-@include add-font('NunitoSans', 600, normal, '../assets/fonts/NunitoSans/NunitoSans-SemiBold.ttf');
-@include add-font('NunitoSans', 600, italic, '../assets/fonts/NunitoSans/NunitoSans-SemiBoldItalic.ttf');
-@include add-font('NunitoSans', 700, normal, '../assets/fonts/NunitoSans/NunitoSans-Bold.ttf');
-@include add-font('NunitoSans', 700, italic, '../assets/fonts/NunitoSans/NunitoSans-BoldItalic.ttf');
+@include add-font('Montserrat', 300, normal, '../assets/fonts/Montserrat/Montserrat-Light.ttf');
+@include add-font('Montserrat', normal, normal, '../assets/fonts/Montserrat/Montserrat-Regular.ttf');
+@include add-font('Montserrat', 600, normal, '../assets/fonts/Montserrat/Montserrat-SemiBold.ttf');
+@include add-font('Montserrat', 700, normal, '../assets/fonts/Montserrat/Montserrat-Bold.ttf');
 
 @media (min-width: 1px) {
 	html {
-		font: #{$font-size-phone}/1.3 'NunitoSans', sans-serif;
+		font: #{$font-size-phone}/1.3 'Montserrat', sans-serif;
 		color: $color-base-font-black;
 	}
 }
 
 @media (min-width: 769px) {
 	html {
-		font: #{$font-size-tablet}/1.3 'NunitoSans', sans-serif;
+		font: #{$font-size-tablet}/1.3 'Montserrat', sans-serif;
 		color: $color-base-font-black;
 	}
 }
 
 @media (min-width: 1281px) {
 	html {
-		font: #{$font-size-desktop}/1.3 'NunitoSans', sans-serif;
+		font: #{$font-size-desktop}/1.3 'Montserrat', sans-serif;
 		color: $color-base-font-black;
 	}
 }
@@ -54,7 +52,7 @@ $step: 0.32;
 }
 
 #{$headings} {
-	font-family: 'NunitoSans', 'Arial', sans-serif;
+	font-family: 'Montserrat', 'Arial', sans-serif;
 	line-height: 1.1em;
 	margin: 0.3em 0 0.5em 0;
   font-weight: 600;

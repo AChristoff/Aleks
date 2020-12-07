@@ -2,7 +2,11 @@ import { NavLink } from 'react-router-dom'
 import { useContext, useState } from 'react'
 import Burger from './partials/Burger'
 import './Nav.scss'
+
+//  For translations
 import { LangContext } from '../../../../context/langContext';
+import pageDataEN from '../../../../data/en/pageData.json'
+import pageDataBG from '../../../../data/bg/pageData.json'
 
 function Nav() {
   //State
@@ -10,6 +14,7 @@ function Nav() {
 
   //Context
   const { lang, updateLangContext } = useContext(LangContext);
+  const { nav } = lang === 'en' ? pageDataEN : pageDataBG;
 
   const toggleNav = () => {
     setNavClick(++navClick)
@@ -27,24 +32,24 @@ function Nav() {
       <ul>
         <li className='home-btn'>
           <NavLink to='/' exact activeClassName='active' onClick={toggleNav}>
-            Home
+            {nav.home}
           </NavLink>
         </li>
 
         <li className='all-offers-tab'>
           <NavLink to='/about' exact onClick={toggleNav}>
-            About
+          {nav.about}
           </NavLink>
         </li>
 
         <li className='all-offers-tab'>
           <NavLink to='/portfolio' exact onClick={toggleNav}>
-            Portfolio
+            {nav.portfolio}
           </NavLink>
         </li>
 
         <li className='all-offers-tab lang-tab' onClick={changeLang}>
-          <span className="lang">{lang}</span>
+          <span className="lang">{nav.lang}</span>
         </li>
       </ul>
     </nav>

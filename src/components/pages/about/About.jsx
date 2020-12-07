@@ -2,7 +2,7 @@ import './About.scss';
 import { useContext } from 'react'
 import { FaUserTie, FaPuzzlePiece, FaBriefcase, FaGraduationCap, FaFlag } from 'react-icons/fa';
 import Rating from './partials/Rating';
-
+//  For translations
 import { LangContext } from '../../../context/langContext';
 import pageDataEN from '../../../data/en/pageData'
 import pageDataBG from '../../../data/bg/pageData'
@@ -49,7 +49,7 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               <span className='about-icons'>
                 <FaPuzzlePiece />
               </span>
-              Skills
+              {about.skills.title}
             </h5>
 
             <ul>
@@ -106,15 +106,15 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               <span className='about-icons'>
                 <FaFlag />
               </span>
-              Languages
+              {about.languages.title}
             </h5>
 
             <ul>
               <li>
-                <span>English</span> <Rating stars='4' />
+                <span>{about.languages.en}</span> <Rating stars='4' />
               </li>
               <li>
-                <span>Bulgarian</span> <Rating stars='5' />
+                <span>{about.languages.bg}</span> <Rating stars='5' />
               </li>
             </ul>
           </section>
@@ -126,22 +126,19 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               <span className='about-icons'>
                 <FaBriefcase />
               </span>
-              Work History
+              {about.workHistory.title}
             </h5>
 
             <ul>
-              <li>Front-End Developer</li>
+              <li>{about.workHistory.jobs.neterra.title}</li>
               <li>
-                <span>2019 - Present</span> <span>NETERRA Ltd.</span>
+                <span>{about.workHistory.jobs.neterra.period}</span> <span>{about.workHistory.jobs.neterra.employer}</span>
               </li>
-              <li className='left'>Develop the Front-end of Enterprise Resource Planning Software ERP</li>
-              <li className='left'>Develop Landing Pages for company events</li>
-              <li className='left'>JavaScript | CSS/Sass | HTML</li>
-              <li className='left'>Bootstrap | jQuery</li>
-              <li className='left'>Responsive Design</li>
-              <li className='left'>Strong Git management</li>
-              <li className='left'>Excellent communication with QA team</li>
-              <li className='left'>Planning sprints using Scrum based methodology</li>
+              {
+                about.workHistory.jobs.neterra.description.map((p) => (
+                  <li className='left'>{p}</li>
+                ))
+              }
             </ul>
 
             <ul>

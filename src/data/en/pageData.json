@@ -9,7 +9,7 @@
   "home": 
   {
     "hello": "Hello, I am",
-    "name": "Aleksandar Hristob",
+    "name": "Aleksandar Hristov",
     "jobTitle": "Front-end Developer / MERN-MEVN stack",
     "more": "View more about me",
     "link": "here"
@@ -26,6 +26,34 @@
       },
       "phone": "Phone",
       "email": "E-mail"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "languages": {
+      "title": "Languages",
+      "en": "English",
+      "bg": "Bulgarian"
+    },
+    "workHistory": {
+      "title": "Work History",
+      "jobs": {
+        "neterra": {
+          "title": "Front-End Developer",
+          "employer": "NETERRA Ltd.",
+          "period": "2019 - Present",
+          "description": [
+            "Develop the Front-end of Enterprise Resource Planning Software ERP",
+            "Develop Landing Pages for company events",
+            "JavaScript | CSS/Sass | HTML",
+            "Bootstrap | jQuery",
+            "Responsive Design",
+            "Strong Git management",
+            "Excellent communication with QA team",
+            "Planning sprints using Scrum based methodology"
+          ]
+        }
+      }
     }
   }
 }
