@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import Burger from './partials/Burger'
 import './Nav.scss'
 
@@ -23,13 +23,30 @@ function Nav() {
   const changeLang = () => {
     const currentLang = lang === 'en' ? 'bg' : 'en'
     updateLangContext('lang', currentLang)
+    setNavClick(++navClick)
   }
+
+  const handleFocus = (e) => {
+    if (!document.querySelector('.nav-list').contains(e.target) && !document.querySelector('.header-wrapper').contains(e.target)){
+      setNavClick(++navClick)
+    } 
+  }
+
+  //Component did mount
+  useEffect(() => {
+    window.addEventListener('click', handleFocus)
+
+     //Component Will Unmount
+     return () => {
+      window.removeEventListener('click', handleFocus)
+    };
+  },[])
 
   return (
     <nav className='site-nav'>
       <Burger navClick={navClick} />
 
-      <ul>
+      <ul className="nav-list">
         <li className='home-btn'>
           <NavLink to='/' exact activeClassName='active' onClick={toggleNav}>
             {nav.home}
