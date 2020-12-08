@@ -5,6 +5,22 @@
     text-align: center;
     color: $color-base-font-black;
 
+    .download-btn {
+      background: #333;
+      color: #fff;
+      padding: 0.5em 1.5em;
+      width: 100%;
+      display: block;
+      height: 2.5em;
+      border-radius: 1.25em;
+      margin-top: 5em;
+
+      svg {
+        font-size: 1.3em;
+        margin: 0 0 -0.15em 0.1em;
+      }
+    }
+
     .about-cover {
       display: block;
       border-radius: 0.3em;
@@ -67,7 +83,7 @@
       }
 
       .right-col {
-      
+
         .work-history,
         .education {
           ul:first-of-type {

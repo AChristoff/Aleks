@@ -32,6 +32,9 @@
       "en": "English",
       "bg": "Bulgarian"
     },
+    "cv": {
+      "title": "Download CV"
+    },
     "workHistory": {
       "title": "Work History",
       "jobs": {

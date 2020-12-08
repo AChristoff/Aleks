@@ -1,7 +1,10 @@
 import './About.scss';
 import { useContext } from 'react'
-import { FaUserTie, FaPuzzlePiece, FaBriefcase, FaGraduationCap, FaFlag } from 'react-icons/fa';
-import Rating from './partials/Rating';
+import { FaUserTie, FaPuzzlePiece, FaBriefcase, FaGraduationCap, FaFlag } from 'react-icons/fa'
+import Rating from './partials/Rating'
+import { Link } from 'react-router-dom'
+import { HiOutlineDownload } from 'react-icons/hi';
+
 //  For translations
 import { LangContext } from '../../../context/langContext';
 import pageDataEN from '../../../data/en/pageData'
@@ -118,6 +121,13 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               </li>
             </ul>
           </section>
+        
+          <section className='cv'>
+            <Link className='download-btn' to={`assets/img/cv/CV-${lang}-Aleksandar-Hristov-Front-End.pdf`} target="_blank" download>
+              {about.cv.title} <HiOutlineDownload />
+            </Link>
+          </section>
+
         </div>
 
         <div className='right-col'>
