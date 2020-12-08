@@ -187,14 +187,14 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
             <ul>
               <li className='left'>{about.education.softUni.specialty}</li>
               <li>
-                <span>{about.education.softUni.period}</span> <span>{about.education.softUni.university}</span>
+                <span className='left period'>{about.education.softUni.period}</span> <span>{about.education.softUni.university}</span>
               </li>
             </ul>
 
             <ul>
-            <li className='left'>{about.education.forestry.specialty}</li>
+              <li className='left'>{about.education.forestry.specialty}</li>
               <li>
-                <span>{about.education.forestry.period}</span> <span>{about.education.forestry.university}</span>
+                <span className='left period'>{about.education.forestry.period}</span> <span className="right">{about.education.forestry.university}</span>
               </li>
             </ul>
           </section>
