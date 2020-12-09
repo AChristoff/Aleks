@@ -55,7 +55,7 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               {about.skills.title}
             </h5>
 
-            <ul>
+            <ul className="rating-list">
               <li>
                 <span>JavaScript</span> <Rating stars='5' />
               </li>
@@ -112,7 +112,7 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               {about.languages.title}
             </h5>
 
-            <ul>
+            <ul className="rating-list">
               <li>
                 <span>{about.languages.en}</span> <Rating stars='4' />
               </li>
@@ -123,7 +123,7 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
           </section>
         
           <section className='cv'>
-            <Link className='download-btn' to={`assets/img/cv/CV-${lang}-Aleksandar-Hristov-Front-End.pdf`} target="_blank" download>
+            <Link className='download-btn' to={`assets/img/cv/Aleksandar_Hristov_CV_${lang}.pdf`} target="_blank" download>
               {about.cv.title} <HiOutlineDownload />
             </Link>
           </section>

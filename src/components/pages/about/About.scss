@@ -9,11 +9,12 @@
       background: #333;
       color: #fff;
       padding: 0.5em 1.5em;
-      width: 100%;
+      width: 98%;
       display: block;
       height: 2.5em;
       border-radius: 1.25em;
-      margin-top: 5em;
+      margin: 5em 0.35em 0;
+      max-width: 20em;
 
       svg {
         font-size: 1.3em;
@@ -64,6 +65,17 @@
         ul {
           padding: 0 1em;
           margin: 0 auto;
+
+          &.rating-list {
+            li {
+              justify-content: flex-start;
+
+              span {
+                min-width: 8em;
+                text-align: left;
+              }
+            }
+          }
 
           li {
             display: flex;
