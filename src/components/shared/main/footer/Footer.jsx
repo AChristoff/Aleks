@@ -9,10 +9,10 @@ function Footer() {
     <footer className="app-footer">
       <section>&copy;{ ` 2019-${currentYear}` }</section>
       <section className='social-links'>
-        <a href="https://github.com/AChristoff" target="_blank" rel="noreferrer">
+        <a href="https://github.com/AChristoff" target="_blank" rel="noopener noreferrer" >
           <FaGithub className="footer-icons"/>
         </a>
-        <a href="https://www.linkedin.com/in/aleksandar-hristov-812340122/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/aleksandar-hristov-812340122/" target="_blank" rel="noopener noreferrer" >
           <FaLinkedin className="footer-icons"/>
         </a>
       </section>

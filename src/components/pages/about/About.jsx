@@ -72,6 +72,9 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
                 <span>Vue</span> <Rating stars='3' />
               </li>
               <li>
+                <span>Redux</span> <Rating stars='2' />
+              </li>
+              <li>
                 <span>Sass</span> <Rating stars='4' />
               </li>
               <li>
