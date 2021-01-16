@@ -1,5 +1,6 @@
 import './Portfolio.scss'
 import FlipCard from './partials/FlipCard'
+import Meta from '../../../components/shared/Meta'
 
 import { useContext } from 'react'
 
@@ -17,9 +18,10 @@ function Portfolio() {
   const { lang } = useContext(LangContext)
   const { cards } = lang === 'en' ? DataEN : DataBG;
   const { portfolio } = lang === 'en' ? pageDataEN : pageDataBG;
-
+  
   return (
     <div className='portfolio'>
+      <Meta title='Portfolio' />
       <h3 className='page-title'>{portfolio.title}</h3>
 
       <section className='card-list'>

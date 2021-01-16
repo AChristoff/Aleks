@@ -1,9 +1,26 @@
 {
   "cards": [
     {
+      "img": "e-shop.png",
+      "title": "Електронен магазин",
+      "description": "MERN & Redux",
+      "buttons": [
+        {
+          "link": "https://e-shop-aleksov.herokuapp.com",
+          "title": "Виж проект",
+          "class": "view-btn"
+        },
+        {
+          "link": "https://github.com/AChristoff/e-shop/",
+          "title": "Код",
+          "class": "repo-btn"
+        }
+      ]
+    },
+    {
       "img": "mern.png",
       "title": "Сайт за обяви",
-      "description": "ReactJS, MongoDB, NodeJS, Expres",
+      "description": "React, MongoDB, NodeJS, Express",
       "buttons": [
         {
           "link": "https://prodavalnik.aleksov.work/",

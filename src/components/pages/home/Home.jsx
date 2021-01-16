@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import './Home.scss'
+import Meta from '../../../components/shared/Meta'
 
 import { useContext } from 'react'
 import { LangContext } from '../../../context/langContext';
@@ -15,6 +16,7 @@ const { home } = lang === 'en' ? pageDataEN : pageDataBG
   return (
     <section className="jumbotron">
       
+      <Meta title='Home' />
       <h6>{home.hello}</h6>
 
       <h1>{home.name}</h1>

@@ -2,6 +2,7 @@ import './About.scss';
 import { useContext } from 'react'
 import { FaUserTie, FaPuzzlePiece, FaBriefcase, FaGraduationCap, FaFlag } from 'react-icons/fa'
 import Rating from './partials/Rating'
+import Meta from '../../../components/shared/Meta'
 import { Link } from 'react-router-dom'
 import { HiOutlineDownload } from 'react-icons/hi';
 
@@ -18,6 +19,7 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
 
   return (
     <div className='about'>
+      <Meta title='About' />
       <h3>{about.title}</h3>
 
       <section className='about-cover'>

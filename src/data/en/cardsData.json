@@ -1,6 +1,23 @@
 {
   "cards": [
     {
+      "img": "e-shop.png",
+      "title": "E-Shop",
+      "description": "MERN & Redux",
+      "buttons": [
+        {
+          "link": "https://e-shop-aleksov.herokuapp.com",
+          "title": "View project",
+          "class": "view-btn"
+        },
+        {
+          "link": "https://github.com/AChristoff/e-shop/",
+          "title": "Repo",
+          "class": "repo-btn"
+        }
+      ]
+    },
+    {
       "img": "mern.png",
       "title": "Fullstack JavaScript",
       "description": "ReactJS, MongoDB, NodeJS, Expres",
