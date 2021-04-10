@@ -1,6 +1,18 @@
 {
   "cards": [
     {
+      "img": "campic-bg.png",
+      "title": "Campic-bg",
+      "description": "MERN & Redux",
+      "buttons": [
+        {
+          "link": "https://www.campic-bg.com/",
+          "title": "View project",
+          "class": "view-btn"
+        }
+      ]
+    },
+    {
       "img": "e-shop.png",
       "title": "E-Shop",
       "description": "MERN & Redux",

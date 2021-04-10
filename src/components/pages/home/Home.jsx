@@ -16,7 +16,7 @@ const { home } = lang === 'en' ? pageDataEN : pageDataBG
   return (
     <section className="jumbotron">
       
-      <Meta title='Home' />
+      <Meta title='Front-End Developer' />
       <h6>{home.hello}</h6>
 
       <h1>{home.name}</h1>

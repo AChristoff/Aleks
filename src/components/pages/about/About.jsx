@@ -57,7 +57,7 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               {about.skills.title}
             </h5>
 
-            <ul className="rating-list">
+            <ul className='rating-list'>
               <li>
                 <span>JavaScript</span> <Rating stars='5' />
               </li>
@@ -117,7 +117,7 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               {about.languages.title}
             </h5>
 
-            <ul className="rating-list">
+            <ul className='rating-list'>
               <li>
                 <span>{about.languages.en}</span> <Rating stars='4' />
               </li>
@@ -126,13 +126,12 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
               </li>
             </ul>
           </section>
-        
-          <section className='cv'>
+
+          {/* <section className='cv'>
             <Link className='download-btn' to={`assets/img/cv/Aleksandar_Hristov_CV_${lang}.pdf`} target="_blank" download>
               {about.cv.title} <HiOutlineDownload />
             </Link>
-          </section>
-
+          </section> */}
         </div>
 
         <div className='right-col'>
@@ -145,49 +144,92 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
             </h5>
 
             <ul>
+              <li>{about.workHistory.jobs.atos.title}</li>
+              <li>
+                <span>{about.workHistory.jobs.atos.period}</span>{' '}
+                <a
+                  type='button'
+                  href={about.workHistory.jobs.atos.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {about.workHistory.jobs.atos.employer}
+                </a>
+              </li>
+              {about.workHistory.jobs.atos.description.map((p, i) => (
+                <li className='left' key={i}>
+                  {p}
+                </li>
+              ))}
+            </ul>
+
+            <ul>
               <li>{about.workHistory.jobs.neterra.title}</li>
               <li>
-                <span>{about.workHistory.jobs.neterra.period}</span> <span>{about.workHistory.jobs.neterra.employer}</span>
+                <span>{about.workHistory.jobs.neterra.period}</span>{' '}
+                <a
+                  type='button'
+                  href={about.workHistory.jobs.neterra.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {about.workHistory.jobs.neterra.employer}
+                </a>
               </li>
-              {
-                about.workHistory.jobs.neterra.description.map((p, i) => (
-                  <li className='left' key={i}>{p}</li>
-                ))
-              }
+              {about.workHistory.jobs.neterra.description.map((p, i) => (
+                <li className='left' key={i}>
+                  {p}
+                </li>
+              ))}
             </ul>
 
             <ul>
               <li className='left'>{about.workHistory.jobs.walltopia.title}</li>
               <li>
-                <span>{about.workHistory.jobs.walltopia.period}</span> <span>{about.workHistory.jobs.walltopia.employer}</span>
+                <span>{about.workHistory.jobs.walltopia.period}</span>{' '}
+                <a
+                  type='button'
+                  href={about.workHistory.jobs.walltopia.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {about.workHistory.jobs.walltopia.employer}
+                </a>
               </li>
 
               <li className='position'>
-                <span>{about.workHistory.jobs.walltopia.pm.time}</span> <span>{about.workHistory.jobs.walltopia.pm.title}</span>
+                <span>{about.workHistory.jobs.walltopia.pm.time}</span>{' '}
+                <span>{about.workHistory.jobs.walltopia.pm.title}</span>
               </li>
-              {
-                about.workHistory.jobs.walltopia.pm.description.map((p, i) => (
-                  <li className='left' key={i}>{p}</li>
-                ))
-              }
+              {about.workHistory.jobs.walltopia.pm.description.map((p, i) => (
+                <li className='left' key={i}>
+                  {p}
+                </li>
+              ))}
 
               <li className='position'>
-                <span>{about.workHistory.jobs.walltopia.teamLead.time}</span> <span>{about.workHistory.jobs.walltopia.teamLead.title}</span>
+                <span>{about.workHistory.jobs.walltopia.teamLead.time}</span>{' '}
+                <span>{about.workHistory.jobs.walltopia.teamLead.title}</span>
               </li>
-              {
-                about.workHistory.jobs.walltopia.teamLead.description.map((p, i) => (
-                  <li className='left' key={i}>{p}</li>
-                ))
-              }
-              
+              {about.workHistory.jobs.walltopia.teamLead.description.map(
+                (p, i) => (
+                  <li className='left' key={i}>
+                    {p}
+                  </li>
+                )
+              )}
+
               <li className='position'>
-                <span>{about.workHistory.jobs.walltopia.drafter.time}</span> <span>{about.workHistory.jobs.walltopia.drafter.title}</span>
+                <span>{about.workHistory.jobs.walltopia.drafter.time}</span>{' '}
+                <span>{about.workHistory.jobs.walltopia.drafter.title}</span>
               </li>
-              {
-                about.workHistory.jobs.walltopia.drafter.description.map((p, i) => (
-                  <li className='left' key={i}>{p}</li>
-                ))
-              }
+              {about.workHistory.jobs.walltopia.drafter.description.map(
+                (p, i) => (
+                  <li className='left' key={i}>
+                    {p}
+                  </li>
+                )
+              )}
             </ul>
           </section>
 
@@ -202,14 +244,22 @@ const { about } = lang === 'en' ? pageDataEN : pageDataBG;
             <ul>
               <li className='left'>{about.education.softUni.specialty}</li>
               <li>
-                <span className='left period'>{about.education.softUni.period}</span> <span>{about.education.softUni.university}</span>
+                <span className='left period'>
+                  {about.education.softUni.period}
+                </span>{' '}
+                <span>{about.education.softUni.university}</span>
               </li>
             </ul>
 
             <ul>
               <li className='left'>{about.education.forestry.specialty}</li>
               <li>
-                <span className='left period'>{about.education.forestry.period}</span> <span className="right">{about.education.forestry.university}</span>
+                <span className='left period'>
+                  {about.education.forestry.period}
+                </span>{' '}
+                <span className='right'>
+                  {about.education.forestry.university}
+                </span>
               </li>
             </ul>
           </section>

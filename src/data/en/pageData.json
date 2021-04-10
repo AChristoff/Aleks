@@ -38,14 +38,29 @@
     "workHistory": {
       "title": "Work History",
       "jobs": {
+        "atos": {
+          "title": "Front-End Developer - React",
+          "employer": "Atos Bulgaria",
+          "period": "2021 - Present",
+          "link": "https://atos.net/bg/bulgaria/atos-bulgaria-competency-center",
+          "description": [
+            "Develop the Front-end of software that automate and improve the business processes of large corporations such as Coca-Cola!",
+            "JavaScript/React-Redux | CSS3/Sass | HTML5",
+            "Responsive Design",
+            "Version Control Management with Git  ",
+            "Excellent communication with the PM & QA teams",
+            "Planning sprints using Scrum based methodology"
+          ]
+        },
         "neterra": {
           "title": "Front-End Developer",
           "employer": "NETERRA Ltd.",
-          "period": "2019 - Present",
+          "period": "2019 - 2021",
+          "link": "https://neterra.net",
           "description": [
             "Develop the Front-end of Enterprise Resource Planning Software ERP",
             "Develop Landing Pages for company events",
-            "JavaScript | CSS/Sass | HTML",
+            "JavaScript/Vue | CSS/Sass | HTML",
             "Bootstrap | jQuery",
             "Responsive Design",
             "Strong Git management",
@@ -57,6 +72,7 @@
           "title": "Project Manager | Team lead | Drafter",
           "employer": "WALLTOPIA AD",
           "period": "2014 - 2019",
+          "link": "https://walltopia.com",
           "pm": {
             "title": "Project Manager",
             "time": "1Y",
